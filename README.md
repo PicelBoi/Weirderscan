@@ -3,7 +3,7 @@ Weatherscan but... weird?
 # Copyright and Licensing
 The PicelBoi Channel & Weirderscan are copyright of PicelBoi/Etan Zheng. This can be used in videos or be remixed/forked as long as you credit me. \
 The Weather Channel & Weatherscan are copyright of the Weather Group, LLC, a subsidiary of Allen Media Group. No copyright infringement is intended. \
-Super Smash Bros. Brawl, Kirby's Return To Dreamland, Kirby and The Forgotten Land, Kirby: Triple Deluxe, Kirby: Planet Robobot, and Kirby Super Star Ultra are owned by Nintendo. \
+Super Smash Bros. Brawl, Kirby's Return To Dreamland Deluxe, Kirby and The Forgotten Land, Kirby: Triple Deluxe, Kirby: Planet Robobot, and Kirby Super Star Ultra are owned by Nintendo. \
 OMORI is owned by OMOCAT. \
 Gran Turismo 7 is owned by Polyphony Digital. \
 UNDERTALE is owned by Tony Fox. \
