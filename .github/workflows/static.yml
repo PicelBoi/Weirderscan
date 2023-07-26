@@ -53,5 +53,5 @@ jobs:
           # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
           node-version: ${{ matrix.node-version }}
       - run: npm install --production
-      - run: npm start
+      
             
