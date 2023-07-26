@@ -1,1 +1,1 @@
-Usually used for extra art.
+Used to make assets for this project. May get DMCA'ed here.
