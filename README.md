@@ -34,5 +34,9 @@ Max Coveri - Running In The 90s \
 Yodobashi Camera (Unknown Artist) - Main Theme 
 # Art
 Most of the art are edited by PicelBoi, and was created by The Weather Channel (2010), OMOCAT (2020), and Nintendo/HAL Labs (2008 - 2022).
+# Images
+Images used: A tower from Flushing (Took it myself using a samsung galaxy s3) & "New York Skyline At Night" by Petr Kratochvil licensed using CC0 under a Public Domain license. 
+# Fonts
+Fonts used: Overpass, IBM Plex Sans & Mono, and Bahnschrift.
 
 
