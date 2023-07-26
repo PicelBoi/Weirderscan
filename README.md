@@ -25,5 +25,5 @@ Asuka Ohta, Ryo Nagamatsu - Coconut Mall (MKWII) \
 Edo Boys - No One Sleep In Tokyo \
 Leslie Parish - Remember Me \
 Max Coveri - Running In The 90s \
-Yodobashi Camera (Unknown Artist) - Main Theme \
+Yodobashi Camera (Unknown Artist) - Main Theme 
 
