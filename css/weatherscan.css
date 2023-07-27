@@ -339,10 +339,11 @@
   max-width: 164px
 }
 .info-slide-content.severe-extended-forecast .frost-pane.ivw {
-  background-position: -586.5px -364px; 757
+  background-position: -586.5px -364px;  
   transform: translate(0px, 45px);
   min-width: 164px;
   max-width: 164px
+  
 }
 .info-slide-content.severe-extended-forecast .lfrost-pane {
   transform: translate(0px, 45px);
@@ -6270,7 +6271,7 @@ label{
   bottom: 0;
   z-index: 0;
   color: #fff;
-  background: linear-gradient(to right, #4b411e 0, #ae9b57 100%);
+  background: linear-gradient(to right, #525252 0, #d3d3d3 100%);
   background-color: #4b411e
 }
 .forecast-tile.hourly .footer span{
