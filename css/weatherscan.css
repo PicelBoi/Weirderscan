@@ -1,7 +1,7 @@
-@import('https://api.fonts.coollabs.io/css2?family=IBM Plex Sans');
-@import('https://api.fonts.coollabs.io/css2?family=IBM Plex Mono');
-@import('https://api.fonts.coollabs.io/css2?family=Overpass');
-@import('https://api.fonts.coollabs.io/css2?family=Overpass Mono');
+@import('https://api.fonts.coollabs.io/css2?family=IBM Plex Sans&display=swap');
+@import('https://api.fonts.coollabs.io/css2?family=IBM Plex Mono&display=swap');
+@import('https://api.fonts.coollabs.io/css2?family=Overpass&display=swap');
+@import('https://api.fonts.coollabs.io/css2?family=Overpass Mono&display=swap');
 
 .mapboxgl-ctrl-attrib {
   display:none;
