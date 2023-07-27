@@ -3,34 +3,34 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Weatherscan</title>
+  <title>Weirderscan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+  <link rel="stylesheet" href="css/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
 
   <link rel="stylesheet" href="js/leaflet/timedimension/leaflet.timedimension.control.min.css"/>
   <link rel="stylesheet" href="css/weatherscan.css"/>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
-  <script src='https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.js'></script>
-  <link href='https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.css' rel='stylesheet' />
+  <script src='js/mapbox-gl.js'></script>
+  <link href='css/mapbox-gl.css' rel='stylesheet' />
+  <script src='js/maplibre-gl.js'></script>
+  <link href='css/maplibre-gl.css' rel='stylesheet' />
 
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
 
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+<script src="css/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
 <!--script type="text/javascript" src="https://unpkg.com/leaflet.nontiledlayer/dist/NonTiledLayer.js"></script-->
 <script type="text/javascript" src="js/leaflet/NonTiledLayer.src.js"></script>
 <script type="text/javascript" src="js/leaflet/iso8601.min.js"></script>
 <script type="text/javascript" src="js/leaflet/timedimension/leaflet.timedimension.min.js"></script>
 
 <script src="/js/date_fns.min.js"></script>
-<script src="https://joeiddon.github.io/perlin/perlin.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+<script src="js/perlin.js"></script>
+<script src="js/jquery.marquee.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
@@ -512,7 +512,7 @@
       <!-- CURRENT CONDITIONS AND FORECAST-->
       <div class="info-slide bulletin" style="display: none">
         <div class="info-subheader">
-          <span id="subhead-titlei">WEATHER BULLETIN</span><span id="subhead-noaa" style="display:">FROM THE NATIONAL WEATHER SERVICE</span>
+          <span id="subhead-titlei">Alerts</span><span id="subhead-noaa" style="display:">FROM THE NATIONAL WEATHER SERVICE</span>
         </div>
         <div class='frost-pane' style="display:None">
           <div class='cityname'>Frankfort Area</div>
@@ -546,7 +546,7 @@
 
         <div class='info-slide-content severe-weatherstatement' style="display: none">
           <div class='frost-pane'>
-            <div class='statement'>Weatherscan  brings you this special programming because of severe weather in your area.</div>
+            <div class='statement'>Weirderscan  brings you this special programming because of severe weather in your area because WE HAVE TO!</div>
           </div>
         </div>
 
@@ -1006,7 +1006,7 @@
 
       <!-- Intros -->
       <div class="info-slide city-slide-intro" style="display:none">
-        <div class="weatherscancopyright" style="display:none"> <span class="copyrighttext"> Weatherscan is brought to you by The Weather Channel®<br> and Blue Ridge Communications </span></div>
+        <div class="weatherscancopyright" style="display:none"> <span class="copyrighttext"> Weirderscan is brought to you by The PicelBoi Channel®<br> and Waddle Dee Communications. Find out more by going to https://github.com/PicelBoi/Weirderscan. </span></div>
         <div class='cityaccent viii curve' style="display:none"></div>
         <div class='cityaccent ii curve' style="display:none"></div>
         <div class='cityaccent i curve' style="display:none"></div>
@@ -1016,7 +1016,7 @@
         <div class='cityaccentviishadow curve'></div>
         <div class='cityaccentvii curve'></div>
         <div class='cityaccent ix curve' style="display:none"></div>
-        <div class='cityweatherscanmarquee' style="display:none"><span>weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</span></div>
+        <div class='cityweatherscanmarquee' style="display:none"><span>weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</span></div>
         <div class='segment' style="display:none">Airport Conditions</div>
       </div>
       <div class="info-slide airport-slide-intro" style="display:none">
@@ -1030,7 +1030,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none"><span>weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</span></div>
+        <div class='weatherscanmarquee' style="display:none"><span>weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</span></div>
         <div class='segment' style="display:none">Airport Conditions</div>
       </div>
       <div class="info-slide beach-slide-intro" style="display: none">
@@ -1044,7 +1044,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">Boat & Beach</div>
       </div>
       <div class="info-slide golf-slide-intro" style="display: none">
@@ -1058,7 +1058,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">Golf</div>
       </div>
       <div class="info-slide garden-slide-intro" style="display: none">
@@ -1072,7 +1072,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">Garden</div>
       </div>
       <div class="info-slide ski-slide-intro" style="display: none">
@@ -1086,7 +1086,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">Ski & Snow</div>
       </div>
       <div class="info-slide travel-slide-intro" style="display: none">
@@ -1100,7 +1100,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">Travel Forecasts</div>
       </div>
       <div class="info-slide international-slide-intro" style="display: none">
@@ -1114,7 +1114,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">International Forecasts</div>
       </div>
       <div class="info-slide health-slide-intro" style="display:none">
@@ -1128,7 +1128,7 @@
         <div class='accentvii curve'></div>
         <div class='accent viii curve' style="display:none"></div>
         <div class='accent ix curve' style="display:none"></div>
-        <div class='weatherscanmarquee' style="display:none">weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan  weatherscan</div>
+        <div class='weatherscanmarquee' style="display:none">weirderscan   weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan weirderscan wweirderscan</div>
         <div class='segment' style="display:none">Weather & Your Health</div>
       </div>
       <!-- AIRPORT -->
@@ -1415,9 +1415,9 @@
       <div class='weatherreadyheader'>
         <div class='weatherreadyheaderbg'></div>
         <div class='icon'></div>
-        <div class='weathertext'>W</div>
-        <div class='weathertext2'>eather</div>
-        <div class='readytext'>READY</div>
+        <div class='weathertext'>Safety </div>
+        <div class='weathertext2'></div>
+        <div class='readytext'>Tips</div>
       </div>
       <div class='thing'>
         <div class='thingbg'></div>
@@ -1465,9 +1465,9 @@
         <div class='weatherreadyheader'>
           <div class='weatherreadyheaderbg'></div>
           <div class='icon'></div>
-          <div class='weathertext'>W</div>
-          <div class='weathertext2'>eather</div>
-          <div class='readytext'>READY</div>
+          <div class='weathertext'>Safety</div>
+          <div class='weathertext2'></div>
+          <div class='readytext'>Tips</div>
         </div>
         <div class='frost-pane tipcontent'>
           <div class='wintertip2' style="display: none"><!--originally shown in November 2016--->
@@ -1621,8 +1621,8 @@
           </div>
           <div class='preparednessplantip' style="display: none"><!--originally shown in November 2016--->
             <br>
-            Complete your Family Preparedness Plan at<br>
-            weather.com/READY
+            Stay safe and sound, and trust your guts.<br>
+            If you feel unsafe, you probably are.
           </div>
           <div class='sunscreenwintertip' style="display: none"><!--originally shown in March/April 2016--->
             Use sunscreen during the winter.
@@ -1673,8 +1673,7 @@
             - Turn off space heaters when you leave the room.<br>
             <br>
 						<br>
-            Complete your Family Preparedness Plan at<br>
-            weather.com/READY
+            - Never use a stove or oven to heat your home.
           </div>
           <div class='shovelingtip' style="display: none"><!--originally shown in January 2007--->
             Take frequent breaks when shoveling snow.

@@ -28,14 +28,14 @@ function WeatherAudio() {
 
 		function buildMusicArray(arr) {
 
-			var musicpath = "music/";
+			var musicpath = "https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/audio/";
 
 			// insert track names
 			for (var i = 0; i < audioSettings.order.length; i++) {
-				if (audioSettings.order[i]<20) {
-					arr.push(musicpath + "(" + String(audioSettings.order[i]) + ').wav');
-				} else if (audioSettings.order[i] > 20) {
-					console.log("Only 20 songs. Probably add more soon. -PicelBoi")
+				if (audioSettings.order[i]<67) {
+					arr.push(musicpath + "(" + String(audioSettings.order[i]) + ').mp3');
+				} else if (audioSettings.order[i] > 67) {
+					console.log("Only 67 songs. Probably add more soon. -PicelBoi")
 				}
 			}
 
@@ -195,23 +195,24 @@ function WeatherAudio() {
 		startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Your_local_forecast_2.mp3'], false);
 	}
 	this.playPollenReport = function() {
-		if (audioSettings.narrationType == 'female') {
-			startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Pollen_report.mp3'], false);
-		}
+		
+		startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Pollen_report.mp3'], false);
+	
 	}
 	this.playTrafficFlow = function() {
-		if (audioSettings.narrationType == 'female') {
-			startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Traffic_flow.mp3'], false);
+		
+		startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Traffic_flow.mp3'], false);
 		}
-	}
+
 	this.playRegionalforecast = function() {
-		if (audioSettings.narrationType == 'female') {
-			startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Regional_forecast.mp3'], false);
-		}
+	
+		startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Regional_forecast.mp3'], false);
+	
 	}
 	this.playAirportDelays = function() {
-		if (audioSettings.narrationType == 'female') {
-			startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Local_airport_delays.mp3'], false);
+		
+		startPlaying(['/localvocals/narrations/'+audioSettings.narrationType+'/Local_airport_delays.mp3'], false);
+		
 		}
 	}
 
@@ -232,7 +233,7 @@ function WeatherAudio() {
 
 
 
-}
+
 var weatherAudio = new WeatherAudio();
 //ID3 Reader
 //https://github.com/aadsm/JavaScript-ID3-Reader
