@@ -3192,7 +3192,7 @@ flex-direction: row;
   height: 115px;
   position: absolute;
   left: 241px;
-  top: 52px;
+  top: 44px;
   font-weight: bold;
   font-size: 51.5px;
   transform: scale(99%,112%);
@@ -3201,7 +3201,7 @@ flex-direction: row;
   color: rgb(55, 73, 98);
 }
 .info-slide-content.uvindex .weatherreadyheader .readytext {
-  font-family: 'IBM Plex Sans BQ';
+  font-family: 'IBM Plex Sans';
   width: 100px;
   height: 80px;
   position: absolute;
@@ -3406,7 +3406,7 @@ flex-direction: row;
   height: 115px;
   position: absolute;
   left: 197.5px;
-  top: 52px;
+  top: 42px;
   font-weight: 600;
   font-style: italic;
   font-size: 62px;
@@ -3427,7 +3427,7 @@ flex-direction: row;
   color: rgb(55, 73, 98);
 }
 .info-slide-content.healthtip .weatherreadyheader .readytext {
-  font-family: 'IBM Plex Sans BQ';
+  font-family: 'IBM Plex Sans';
   width: 100px;
   height: 80px;
   position: absolute;
@@ -6313,7 +6313,7 @@ label{
   position: absolute;
   color: #DDDDDD;
   left: 32%;
-  top: 950px;
+  top: 895px;
   width: 68.507%;
   height: 43px;
   font-size: 33px;
