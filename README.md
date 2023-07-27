@@ -1,3 +1,5 @@
+# Notice
+This is the Assets branch - this will be used for large files like audio.
 # Weirderscan
 Weatherscan but... weird?
 # Copyright and Licensing
