@@ -22,5 +22,5 @@ All licenses are stored in the LICENSING file.
 	Extract it then run index.html.
 # Screenshots
 **Weirderscan V1**
-![Weirderscan V1](https://raw.githubusercontent.com/PicelBoi/Weirderscan/Extras/weirderscan_v1.PNG)**Weirderscan v1.1 (unfinished)**
+![Weirderscan V1](https://raw.githubusercontent.com/PicelBoi/Weirderscan/Extras/weirderscan_v1.PNG)**Weirderscan v1.1**
 ![Weirderscan V1](https://raw.githubusercontent.com/PicelBoi/Weirderscan/Extras/weirderscan_v1.1.PNG)
