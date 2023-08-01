@@ -1,6 +1,7 @@
 ﻿# Weirderscan
 A skin for Weatherscan. 
 Why did we make this? Because I had nothing to in the summer do to do other than get eaten by mosquitos at a camp.
+Based off of buffbears Weatherscan emulator. (https://github.com/buffbears/Weatherscan)
 # Credits, Licensing, and Copyright
 All credits and copyright are stored in the CREDITSANDCOPYRIGHT file.
 All licenses are stored in the LICENSING file.
