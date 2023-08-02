@@ -179,9 +179,9 @@
   height: 35px;
   width: 100%;
   background: #3e3d3e;
-  -webkit-mask-image: url(/images/newbg/severefrostpane.svg);
-  -webkit-mask-position: -94.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/severefrostpane.svg);
+  mask-position: -94.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.severe-daypart .hour.ii .thing {
   height: 35px;
@@ -193,9 +193,9 @@
   height: 35px;
   width: 100%;
   background: #3e3d3e;
-  -webkit-mask-image: url(/images/newbg/severefrostpane.svg);
-  -webkit-mask-position: -334.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/severefrostpane.svg);
+  mask-position: -334.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.severe-daypart .hour.iii .thing {
   height: 35px;
@@ -207,9 +207,9 @@
   height: 35px;
   width: 100%;
   background: #3e3d3e;
-  -webkit-mask-image: url(/images/newbg/severefrostpane.svg);
-  -webkit-mask-position: -532.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/severefrostpane.svg);
+  mask-position: -532.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.severe-daypart .hour.iv .thing {
   height: 35px;
@@ -221,9 +221,9 @@
   height: 35px;
   width: 100%;
   background: #3e3d3e;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -730.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -730.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.severe-daypart .hour .thing .thingtext {
   color: #fff;
@@ -697,9 +697,9 @@
   background: #3e3d3e;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/severefrostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/severefrostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.severe-almanac .frost-pane.purple {
   transform: translate(0,45px);
@@ -788,7 +788,7 @@
   position: absolute;
   top: 33px;
   align-self: center;
-  -webkit-filter: drop-shadow(0 0 8px rgba(0, 0, 0, .95));
+  
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, .95));
 }
 
@@ -1033,9 +1033,9 @@ background-image: url(/images/moonphases/new.png);
   height: 35px;
   width: 100%;
   background: #2a3a8a;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -94.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -94.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.daypart .hour.ii .thing {
   height: 35px;
@@ -1047,9 +1047,9 @@ background-image: url(/images/moonphases/new.png);
   height: 35px;
   width: 100%;
   background: #2a3a8a;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -334.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -334.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.daypart .hour.iii .thing {
   height: 35px;
@@ -1061,9 +1061,9 @@ background-image: url(/images/moonphases/new.png);
   height: 35px;
   width: 100%;
   background: #2a3a8a;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -532.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -532.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.daypart .hour.iv .thing {
   height: 35px;
@@ -1075,9 +1075,9 @@ background-image: url(/images/moonphases/new.png);
   height: 35px;
   width: 100%;
   background: #2a3a8a;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -730.5px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -730.5px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.daypart .hour .thing .thingtext {
   color: #fff;
@@ -1238,9 +1238,9 @@ background-image: url(/images/moonphases/new.png);
   height: 35px;
   width: 100%;
   background: #2a3a8a;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.extended-forecast .thingg .thingday {
   color: #fff;
@@ -1552,9 +1552,9 @@ background-image: url(/images/moonphases/new.png);
   background: #2a3a8a;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 
 .info-slide-content.almanac .frost-pane.purple {
@@ -1644,7 +1644,7 @@ background-image: url(/images/moonphases/new.png);
   position: absolute;
   top: 33px;
   align-self: center;
-  -webkit-filter: drop-shadow(0 0 8px rgba(0, 0, 0, .95));
+  
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, .95));
 }
 
@@ -1784,9 +1784,9 @@ background-image: url(/images/moonphases/NEW.png);
   background: rgba(36, 30, 149,1);
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 
 .info-slide-content.airportpanel .leftpanel .frost-pane.top {
@@ -2002,9 +2002,9 @@ background-image: url(/images/moonphases/NEW.png);
   background: rgba(36, 30, 149,1);
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.otherairports .thing .temp {
   position: absolute;
@@ -2124,9 +2124,9 @@ background-image: url(/images/moonphases/NEW.png);
   background: #2a3a8a;
   height: 40px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -393px;
-  -webkit-mask-size: 1065px 1385px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -393px;
+  mask-size: 1065px 1385px;
 }
 .info-slide-content.surfreport .thingtext {
   position: absolute;
@@ -2210,7 +2210,7 @@ background-image: url(/images/moonphases/NEW.png);
   border-left: 13.5px solid transparent;
   border-right: 13.5px solid transparent;
   border-top: 31.5px solid #fff;
-  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
+  
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1))
 }
 .info-slide-content.surfreport .frost-pane.left .watertempbar .temp {
@@ -2277,9 +2277,9 @@ background-image: url(/images/moonphases/NEW.png);
   background: #2a3a8a;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.coastalwaters .thing .thingtext {
   height: 35px;
@@ -2483,9 +2483,9 @@ flex-direction: row;
   background: #241e95;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.health-forecast .frost-pane.mainforecast {
   margin-top: 35px;
@@ -2640,9 +2640,9 @@ flex-direction: row;
   background: #241e95;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
   z-index: 0;
 }
 .info-slide-content.allergy .leftpanel .thing .thingtext {
@@ -2722,7 +2722,7 @@ flex-direction: row;
   border-left: 14px solid transparent;
   border-right: 14px solid transparent;
   border-top: 34px solid #fff;
-  -webkit-filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
+  
   filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75))
 }
 .info-slide-content.allergy .frost-pane.pollen .pollenbar.tree {
@@ -2833,9 +2833,9 @@ flex-direction: row;
   background: #241e95;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.Aches-Breath .thing .thingtext {
   position: absolute;
@@ -2860,9 +2860,9 @@ flex-direction: row;
   position: absolute;
   height: 100%;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -364px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -364px;
+  mask-size: 1065px 1164px;
   background: rgba(19, 116, 241, 1);
 }
 .info-slide-content.Aches-Breath .frost-pane .whitetitle {
@@ -2908,9 +2908,9 @@ flex-direction: row;
   position: absolute;
   height: 100%;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -577px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -577px;
+  mask-size: 1065px 1164px;
   background: rgba(23, 24, 215, 1);
 }
 
@@ -2935,7 +2935,7 @@ flex-direction: row;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 35px solid #fff;
-  -webkit-filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
+  
   filter: drop-shadow(4px 0 4px rgba(0, 0, 0, .75));
 }
 .info-slide-content.Aches-Breath .frost-pane .bar .bararrowtext {
@@ -2974,9 +2974,9 @@ flex-direction: row;
   background: #2a3a8a;
   height: 35px;
   width: 100%;
-  -webkit-mask-image: url(/images/newbg/frostpane.svg);
-  -webkit-mask-position: -72px -329px;
-  -webkit-mask-size: 1065px 1164px;
+  mask-image: url(/images/newbg/frostpane.svg);
+  mask-position: -72px -329px;
+  mask-size: 1065px 1164px;
 }
 .info-slide-content.airquality .leftpanel .thing .thingtext {
   position: absolute;
