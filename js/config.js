@@ -8,12 +8,12 @@ var map_key = 'sk.eyJ1IjoicGljZWxib2kiLCJhIjoiY2xraXFhZzl6MDV3bDN0azZ0YjNrYmgwYS
 
 //Apperance settings. Fields left blank will use defaults. Will only refresh upon reload.
 var apperanceSettings = {
-  iconSet:"2010", //2007 or 2010
+  iconSet:"2007", //2007 or 2010
   serialNumber:"TPBC3141592",// Ex. "TWCS02983932"
   headinID:" Sunset Valley | 31415926535", // Ex. "0298393223"
-  affilateName:"Waddle Dee Comms.",// Ex. "Comcast"
+  affilateName:" Waddle Dee Comms.",// Ex. "Comcast"
   logoURL:"/images/WDDC.png", //image size must be 879*184px or similar aspect ratio.
-  corebackgroud:"city", //forest, mountain, city, buildings, neighborhood, southwest, ocean. Default is buildings.
+  corebackgroud:"neighborhood", //forest, mountain, city, buildings, neighborhood, southwest, ocean. Default is buildings.
   backgroudType:"",//Set to
   backgroudURL:"",//If background type set to "custom" will use this url. URL can be a website or local file path.
   marqueeAd: ["This Weatherscan Emulation is brought to you by the 5D crew. Help from Mapguy11, Goldblazez, and TWCJon! (edited by PicelBoi) Please note this emulator is still in beta. If you encounter a bug, report it at https://github.com/PicelBoi/picelweatherscan. To stay up to date with the latest on the emulator, join our Discord Server, The Weather Ranch, at https://discord.gg/4TpAsRtsAx.", "[Kirby Right Back At Ya Theme Song] Kirby, Kirby, Kirby!That’s a name you should know! Kirby, Kirby, Kirby!He’s the star of the show! Hes more than you think! Hes got maximum pink! Kirby, Kirby, Kirbys the one! He comes right back at ya! He comes right back at ya! Give it all that youve got! Take your very best shot! Hell send it right back at ya for sure, yeah! How can I help you, King Dedede? I need a monster to clobber that there Kirby! Thats what we do best at NME! Youd better get it with a money back guarantee! Oh, Kirby, Kirby, Kirby, saving the day! Kirby, Kirby, Kirby, hes here to stay! Dont be fooled by his size! You wont believe your eyes! Kirby! (Kirby!) Kirby! (Kirby!) Kirby! (Kirby!) Kirby, Kirby, Kirby’s the one! Right back at ya! YEAH!! I wonder why this is called the channel for stupidity."],
