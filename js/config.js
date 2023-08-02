@@ -87,7 +87,7 @@ var audioSettings = {
   shuffle: true, //Shuffle audio. Default is false.
   randomStart: true, //Starts the order from a random spot. Default is true.
   enableNarrations: true, //Play narrations. Default is true.
-  narrationType: 'female',//allen or female. Default is female.
+  narrationType: 'picelboi',//allen or female. Default is female.
 }
 var locationSettings = {
   mainLocation:{
