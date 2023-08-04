@@ -8,7 +8,7 @@ var map_key = 'sk.eyJ1IjoicGljZWxib2kiLCJhIjoiY2xraXFhZzl6MDV3bDN0azZ0YjNrYmgwYS
 
 //Apperance settings. Fields left blank will use defaults. Will only refresh upon reload.
 var apperanceSettings = {
-  iconSet:"2007", //2007 or 2010
+  iconSet:"2010", //2007 or 2010
   serialNumber:"TPBC3141592",// Ex. "TWCS02983932"
   headinID:" Sunset Valley | 31415926535", // Ex. "0298393223"
   affilateName:" Waddle Dee Comms.",// Ex. "Comcast"
