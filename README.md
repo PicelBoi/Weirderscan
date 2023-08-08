@@ -11,7 +11,7 @@ All licenses are stored in the LICENSING file.
  
 
  1. **Website**
-	Go to https://weirderscan.onthewifi.com 
+	Go to https://weirderscan.picelboi.cf 
  2. **Locally (NOT RECOMMENDED)**
 	 Why:
 	 1. May have some issues.
