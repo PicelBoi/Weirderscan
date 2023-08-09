@@ -20,7 +20,7 @@
 
 </head>
 
-<body id="bg">
+<body class="bg" style="background-size: cover;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
@@ -287,10 +287,10 @@
         </select>
       </div>
       <script>
-        
+      const bg = document.querySelector('body');
       var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
-      document.getElementById("bg").style.background = "url(https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/" + indexbg + ".bg)";
-      document.getElementById("bg").style.backgroundSize= "cover";
+      bg.style.cssText = 'background: url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/7.bg"); background-size: cover; background-position: center; '; 
+      
       
       </script>
       <form action="/action_page.php">
