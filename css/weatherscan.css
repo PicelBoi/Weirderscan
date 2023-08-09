@@ -4342,7 +4342,9 @@ body,
 html {
   height:100%;
   background-color:#000;
-  font-size:100%
+  font-size:100%;
+  background-size: cover;
+  
 }
 #main {
   position: relative;
@@ -4670,7 +4672,7 @@ label {
 }
 #info-slides-bg {
   position:absolute;
-  right:76px;
+  right:75px;
   top:92px;
   width:960px;
   height:569px;
@@ -5682,7 +5684,8 @@ label {
   position:absolute;
   top:101px;
   width:458px;
-  color:#fff
+  color:#fff;
+  left:-280px
 }
 #date-time * {
   font-family:overpass mono;
@@ -5704,7 +5707,7 @@ label {
   width:311px;
   height:92px;
   top:310px;
-  left:0;
+  left:-100px;
   line-height:110%;
   display:flex;
   align-items:center;
@@ -5719,6 +5722,7 @@ label {
   margin-left:142px;
   top:180px;
   width:256px;
+  left:-130px
   
   
 }
@@ -5748,7 +5752,7 @@ label {
   font-size:46px;
   position:absolute;
   top:31.5px;
-  left:145px;
+  left:40px;
   letter-spacing:2px;
   text-align:left;
   transform:scale(105%,100%);
@@ -5758,7 +5762,7 @@ label {
   font-size:46px;
   position:absolute;
   top:31.5px;
-  left:146px;
+  left:40px;
   letter-spacing:2px;
   text-align:left;
   transform:scale(105%,100%);
@@ -5768,7 +5772,7 @@ label {
   font-size:69px;
   position:absolute;
   top:88px;
-  left:-12.5px;
+  left:-155px;
   text-align:center;
   width:100%;
   transform:scale(102.5%,100%);
@@ -5778,7 +5782,7 @@ label {
   font-family:pressurearrow,Overpass;
   font-size:31px;
   position:absolute;
-  left:145px;
+  left:40px;
   top:177px;
   text-align:left;
   width:62.5%;
@@ -5870,14 +5874,14 @@ label {
   height:41px;
   left:0;
   top:637px;
-  text-align:right;
+  text-align:center;
   color:#d4d4d4;
   font-size:23.5px;
   padding:7px 14px 0 0;
   text-shadow:2px 2px 4px #000;
   line-height:125%;
   z-index:5;
-  background:linear-gradient(to right,#3f3f3f 0,#242424 100%)
+  background:linear-gradient(to right,#171717 0,#242424 100%)
 }
 #minimap-title span {
   display:block;

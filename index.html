@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <meta http-equiv="refresh" content="1800">
-<html>
+
+<html style="background-image: url(images/looksnicer.png;); background-size: cover;">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Weirderscan</title>
@@ -17,7 +19,8 @@
   <link href='https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.css' rel='stylesheet' />
 
 </head>
-<body>
+
+<body id="bg">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
@@ -283,6 +286,13 @@
           <option value="city">city</option>
         </select>
       </div>
+      <script>
+        
+      var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
+      document.getElementById("bg").style.background = "url(https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/" + indexbg + ".bg)";
+      document.getElementById("bg").style.backgroundSize= "cover";
+      
+      </script>
       <form action="/action_page.php">
       <div class=textfield>
         <label for="cc">Current Temperature</label>
@@ -488,7 +498,10 @@
   </div>
 
 <div id="main" class="container">
-  
+  <script>
+    var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
+    document.getElementById("bg").style.background = "url(https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/" + indexbg + ".bg)";
+  </script>
   <img id="logo" src="images/weatherlogos.png"/>
   <img id="template" src="images/template-4k.png"/>
   <div id="info-slides-bg"></div>
@@ -2035,4 +2048,6 @@
 </div>
 
 </body>
+
 </html>
+
