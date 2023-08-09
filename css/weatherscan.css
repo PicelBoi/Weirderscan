@@ -375,9 +375,9 @@
   height:35px;
   width:100%;
   background:#3e3d3e;
-  -webkit-mask-image:url(/images/newbg/severefrostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/severefrostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.severe-extended-forecast .thingg .thingday {
   color:#fff;
@@ -2710,9 +2710,9 @@
   background:#241e95;
   height:102.5px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-630px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-630px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.allergy .frost-pane.totalpollen .cat {
   font-family:ibm plex sans;
@@ -2946,7 +2946,7 @@
   border-right:16.5px solid transparent;
   border-top:32.5px solid #fff;
   transform:rotate(-90deg);
-  -webkit-filter:drop-shadow(-4px 2px 4px rgba(0,0,0,.75));
+  filter:drop-shadow(-4px 2px 4px rgba(0,0,0,.75));
   filter:drop-shadow(-4px 2px 4px rgba(0,0,0,.75))
 }
 .info-slide-content.airquality .rightpanel {
@@ -2976,9 +2976,9 @@
   background:#2a3a8a;
   height:90px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-541.359px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-541.359px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.airquality .rightpanel .thing .thingtext {
   position:absolute;
@@ -3076,9 +3076,9 @@
 .info-slide-content.uvindex .weatherreadyheader .weatherreadyheaderbg {
   width:100%;
   height:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px;
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px;
   background:linear-gradient(to right,rgba(255,255,255,1) 0,rgba(255,255,255,1) 100%)
 }
 .info-slide-content.uvindex .weatherreadyheader .icon {
@@ -3149,9 +3149,9 @@
   background:#241e95;
   height:42.5px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -440px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -440px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.uvindex .thing .currentlytext {
   font-size:35px;
@@ -3299,9 +3299,9 @@
 .info-slide-content.healthtip .weatherreadyheader .weatherreadyheaderbg {
   width:100%;
   height:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -336px;
-  -webkit-mask-size:1064px 1174px;
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -336px;
+  mask-size:1064px 1174px;
   background:linear-gradient(to right,rgba(255,255,255,1) 0,rgba(255,255,255,1) 100%)
 }
 .info-slide-content.healthtip .weatherreadyheader .icon {
@@ -3401,9 +3401,9 @@
   background:#2a3a8a;
   height:35px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.teetime .frost-pane {
   background-position:-72px -364px;
@@ -3508,9 +3508,9 @@
   background:#2a3a8a;
   height:35px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.golfforecast .thing .thingtext {
   height:35px;
@@ -3642,7 +3642,7 @@
   border-left:15px solid transparent;
   border-right:15px solid transparent;
   border-top:35px solid #fff;
-  -webkit-filter:drop-shadow(4px 0 4px rgba(0,0,0,.75));
+  filter:drop-shadow(4px 0 4px rgba(0,0,0,.75));
   filter:drop-shadow(4px 0 4px rgba(0,0,0,.75))
 }
 .info-slide-content.golfforecast .bar .bararrowtext {
@@ -3702,9 +3702,9 @@
   background:#2a3a8a;
   height:40px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -393px;
-  -webkit-mask-size:1065px 1385px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -393px;
+  mask-size:1065px 1385px
 }
 .info-slide-content.gardenindex .frost-pane {
   max-height:411.25px;
@@ -3809,7 +3809,7 @@
   width:430px
 }
 .info-slide-content.gardenindex .frost-pane.right .bar .barcat {
-  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
   display:flex;
   width:41px;
   height:52.5px;
@@ -3831,7 +3831,7 @@
   border-left:14.5px solid transparent;
   border-right:14.5px solid transparent;
   border-top:32px solid #fff;
-  -webkit-filter:drop-shadow(4px 0 4px rgba(0,0,0,.75));
+  filter:drop-shadow(4px 0 4px rgba(0,0,0,.75));
   filter:drop-shadow(4px 0 4px rgba(0,0,0,.75))
 }
 .info-slide-content.gardenindex .frost-pane.right .bar .bararrowtext {
@@ -3893,15 +3893,15 @@
   background:#241e95;
   height:40px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.skireport .skilocation.ii .thing .thingbg {
-  -webkit-mask-position:-72px -481.5px
+  mask-position:-72px -481.5px
 }
 .info-slide-content.skireport .skilocation.iii .thing .thingbg {
-  -webkit-mask-position:-72px -634px
+  mask-position:-72px -634px
 }
 .info-slide-content.skireport .thing .thingtext {
   position:relative;
@@ -4004,9 +4004,9 @@
   background:#241e95;
   height:52.5px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.destinationforecast .thing .thingtext {
   position:relative;
@@ -4153,9 +4153,9 @@
   background:#241e95;
   height:52.5px;
   width:100%;
-  -webkit-mask-image:url(/images/newbg/frostpane.svg);
-  -webkit-mask-position:-72px -329px;
-  -webkit-mask-size:1065px 1164px
+  mask-image:url(/images/newbg/frostpane.svg);
+  mask-position:-72px -329px;
+  mask-size:1065px 1164px
 }
 .info-slide-content.internationalforecast .thing .thingtext {
   position:relative;
@@ -4332,7 +4332,7 @@ p {
   font-family:IBM Plex Sans,zemestrostd,Sans-Serif;
   font-weight:400;
   font-style:normal;
-  -webkit-font-smoothing:subpixel-antialiased
+  
 }
 html * {
   box-sizing:border-box;
@@ -4692,7 +4692,7 @@ label {
 }
 .info-slides-header {
   position:absolute;
-  top:2.5px;
+  top:-2.5px;
   left:2.5px;
   background-color:#4682b4;
   height:40.5px;
@@ -4896,7 +4896,7 @@ label {
   flex:1;
   z-index:0
 }
-.info-slide .curve {
+.info-slide {
   position:absolute;
   background-position:0 0;
   background-repeat:no-repeat;
@@ -4909,12 +4909,7 @@ label {
 }
 .info-slide .accent.i {
   background-color:#7596d2;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+
   width:40%;
   height:128.5%;
   top:-16.3%;
@@ -4929,12 +4924,7 @@ label {
 }
 .info-slide .accent.ii {
   background-color:#6b91d7;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+
   width:55%;
   height:131%;
   top:-13.5%;
@@ -4950,12 +4940,7 @@ label {
 }
 .info-slide .accent.iii {
   background-color:#6b91d7;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+ 
   width:55%;
   height:172.4%;
   top:-12.25%;
@@ -4971,10 +4956,7 @@ label {
 }
 .info-slide .accent.iv {
   background-color:#6b8bc1;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+
   width:67.5%;
   height:172.5%;
   top:-6.7%;
@@ -4989,10 +4971,7 @@ label {
 }
 .info-slide .accent.v {
   background-color:#5d88e4;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+ 
   width:72.5%;
   height:187.5%;
   top:-12.5%;
@@ -5006,10 +4985,7 @@ label {
 }
 .info-slide .accent.vi {
   background-color:#5d88e4;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+
   width:72.5%;
   height:187.5%;
   top:-17.8%;
@@ -5017,21 +4993,17 @@ label {
   animation:accentmovevi 5s linear normal forwards
 }
 .info-slide .accentviishadow {
-  background-image:url(/images/airport-curve.svg);
-  background-size:200% 100%;
+
   width:72.5%;
   height:227.5%;
   top:-47.25%;
   left:-20.85%;
-  -webkit-filter:drop-shadow(4px 0 4px rgba(0,0,0,.65));
+  filter:drop-shadow(4px 0 4px rgba(0,0,0,.65));
   filter:drop-shadow(4px 0 4px rgba(0,0,0,.75))
 }
 .info-slide .accentvii {
   background-color:#6c8bbf;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+  
   width:72.5%;
   height:227.5%;
   top:-47.25%;
@@ -5045,10 +5017,7 @@ label {
 }
 .info-slide .accent.viii {
   background-color:#5d88e4;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+  
   width:57.5%;
   height:157.5%;
   bottom:-22.25%;
@@ -5064,14 +5033,11 @@ label {
 }
 .info-slide .accent.ix {
   background-color:#6b8bc1;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 200%;
-  mask-size:200% 200%;
-  -webkit-mask-position:0% 100%;
+
+  mask-position:0% 100%;
   mask-position:0% 100%;
   mask-repeat:no-repeat;
-  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
   width:67.5%;
   height:80.5%;
   bottom:-38.7%;
@@ -5421,12 +5387,7 @@ label {
 }
 .info-slide .cityaccent.i {
   background-color:#e5be45;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+  
   width:40%;
   height:128.5%;
   top:-16.3%;
@@ -5444,12 +5405,7 @@ label {
 }
 .info-slide .cityaccent.ii {
   background-color:#001782;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+  
   width:55%;
   height:131%;
   top:-13.5%;
@@ -5464,12 +5420,7 @@ label {
 }
 .info-slide .cityaccent.iii {
   background-color:#e5be45;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+  
   width:55%;
   height:172.4%;
   top:-12.25%;
@@ -5486,12 +5437,7 @@ label {
 }
 .info-slide .cityaccent.ix {
   background-color:#e5be45;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  -webkit-mask-position:100% 0;
-  mask-size:200% 100%;
-  mask-position:100% 0;
+  
   width:55%;
   height:210.4%;
   bottom:-38.25%;
@@ -5508,10 +5454,7 @@ label {
 }
 .info-slide .cityaccent.iv {
   background-color:#001782;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+ 
   width:67.5%;
   height:202.5%;
   top:-31.45%;
@@ -5526,10 +5469,7 @@ label {
 }
 .info-slide .cityaccent.v {
   background-color:#e5be45;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+  
   width:72.5%;
   height:210.5%;
   top:-12.5%;
@@ -5538,21 +5478,18 @@ label {
   animation:cityaccentmovev 10s linear normal forwards
 }
 .info-slide .cityaccentviishadow {
-  background-image:url(/images/airport-curve.svg);
-  background-size:200% 100%;
+  
+  
   width:72.5%;
   height:227.5%;
   top:-47.25%;
   left:-20.85%;
-  -webkit-filter:drop-shadow(4px 0 4px rgba(0,0,0,.65));
-  filter:drop-shadow(4px 0 4px rgba(0,0,0,.75))
+  filter:drop-shadow(4px 0 4px rgba(0,0,0,.65));
+  
 }
 .info-slide .cityaccentvii {
   background-color:#e5be45;
-  -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
+  
   width:72.5%;
   height:227.5%;
   top:-47.25%;
@@ -5565,11 +5502,8 @@ label {
   }
 }
 .info-slide .cityaccent.viii {
-  background-color:#001782 -webkit-mask-image:url(/images/airport-curve.svg);
-  mask-image:url(/images/airport-curve.svg);
-  -webkit-mask-size:200% 100%;
-  mask-size:200% 100%;
-  -webkit-mask-position:0 100%;
+  background-color:#001782 
+
   width:57.5%;
   height:157.5%;
   bottom:-22.25%;
@@ -5664,7 +5598,7 @@ label {
   transform:scale(100%,100%)
 }
 .leaflet-overlay-pane canvas {
-  -webkit-filter:drop-shadow(0 2px 2px #000);
+  filter:drop-shadow(0 2px 2px #000);
   filter:drop-shadow(0 2px 2px #000)
 }
 .radarTile {

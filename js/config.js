@@ -16,7 +16,7 @@ var apperanceSettings = {
   corebackgroud:"neighborhood", //forest, mountain, city, buildings, neighborhood, southwest, ocean. Default is buildings.
   backgroudType:"",//Set to
   backgroudURL:"",//If background type set to "custom" will use this url. URL can be a website or local file path.
-  marqueeAd: ["Weirderscan is brought to you by GitHub pages. We may think OMOCAT, Nintendo, Sony, EA, and TWC may sue us. But we don't care. We are not affiliated with any of these companies. We are just a bunch of weirdos who like to make weird stuff. Thanks GitHub Copliot adding this piece of text. Blah blah blah."], //Array of strings. Each string will be a seperate marquee ad.
+  marqueeAd: ["Weirderscan is brought to you by GitHub pages. Made by Goldblazz Blah blah blah."], //Array of strings. Each string will be a seperate marquee ad.
 }
 var slideApperanceSettings = {//Ill add more options here eventually.
   localDoppler: {},
