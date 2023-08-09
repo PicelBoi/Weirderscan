@@ -307,7 +307,7 @@ var mainMap
 					setTimeout(function() {
 						$('.city-slide-intro .weatherscancopyright .copyrighttext').fadeOut(500).promise().done(function(){
 							$('.city-slide-intro .weatherscancopyright .copyrighttext').css('font-size','15px')
-							$('.city-slide-intro .weatherscancopyright .copyrighttext').text(`© ${new Date().getFullYear()} Weather Group Television LLC All Rights Reserved`)
+							$('.city-slide-intro .weatherscancopyright .copyrighttext').text(`© ${new Date().getFullYear()} All rights reserved to their rightful owners.`)
 							$('.city-slide-intro .weatherscancopyright .copyrighttext').fadeIn(500);
 						});
 					}, 5000);
@@ -318,7 +318,7 @@ var mainMap
 						$('.city-slide-intro .cityweatherscanmarquee').fadeOut(500).promise().done(function(){
 							$('.city-slide-intro').fadeOut(0);
 							$('.city-slide-intro .weatherscancopyright .copyrighttext').css('font-size','28px')
-							$('.city-slide-intro .weatherscancopyright .copyrighttext').text("Weatherscan is brought to you by The Weather Channel® and Blue Ridge Communications")
+							$('.city-slide-intro .weatherscancopyright .copyrighttext').text("Weirderscan is brought to you by The PicelBoi Channel®<br> and Waddle Dee Communications. Find out more by going to https://github.com/PicelBoi/Weirderscan.")
 							wait(0);
 						});
 					}, 10000);
