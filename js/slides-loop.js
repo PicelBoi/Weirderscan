@@ -9,6 +9,7 @@ var maindiv = {
 	"localDoppler":".radar-slide",
 	"regionalSatellite":".radar-slide",
 	"bulletin":".bulletin",
+	"picelboi":".kirby",
 	//City Info
 	"cityIntro":".city-slide-intro",
 	"currentConditions":".city-info-slide",
