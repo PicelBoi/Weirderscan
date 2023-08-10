@@ -5619,7 +5619,7 @@ label {
   top:101px;
   width:458px;
   color:#fff;
-  left:0px
+  
 }
 #date-time * {
   font-family:overpass mono;
@@ -6150,7 +6150,7 @@ label {
 #marquee-background {
   position:absolute;
   color:#fff;
-  left:23.5%;
+  left:24%;
   top:896px;
   width:92.5%;
   height:41px;
