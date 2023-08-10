@@ -5619,7 +5619,7 @@ label {
   top:101px;
   width:458px;
   color:#fff;
-  left:-280px
+  left:0px
 }
 #date-time * {
   font-family:overpass mono;
@@ -5656,7 +5656,7 @@ label {
   margin-left:142px;
   top:180px;
   width:256px;
-  left:-130px
+  left:0;
   
   
 }

@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg" style="background-size: cover;">
+<body class="bg" style="background-size: cover; background-position: center;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
@@ -289,9 +289,8 @@
       <script>
       const bg = document.querySelector('body');
       var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
-      bg.style.cssText = 'background: url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/7.bg"); background-size: cover; background-position: center; '; 
       
-      
+      bg.style.cssText = ('background: url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg"); background-size: cover; background-position: center; '); 
       </script>
       <form action="/action_page.php">
       <div class=textfield>
@@ -498,10 +497,7 @@
   </div>
 
 <div id="main" class="container">
-  <script>
-    var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
-    document.getElementById("bg").style.background = "url(https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/" + indexbg + ".bg)";
-  </script>
+ 
   <img id="logo" src="images/weatherlogos.png"/>
   <img id="template" src="images/template-4k.png"/>
   <div id="info-slides-bg"></div>
