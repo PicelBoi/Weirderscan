@@ -4862,12 +4862,12 @@ label {
   padding-right:10%
 }
 .city-info-slide {
-  background:transparent url(/images/newbg/core_bg.png) no-repeat;
+  background:transparent url(/images/newbg/city_bg.png) no-repeat;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%
 }
 .severe-city-info-slide {
-  background:transparent url(/images/newbg/severe_core_bg.png) no-repeat;
+  background:transparent url(/images/newbg/city_bg.png) no-repeat;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%
 }
@@ -5512,7 +5512,7 @@ label {
   animation:cityaccentmoveviii 10s linear normal forwards
 }
 .airport-slide {
-  background:transparent url(/images/newbg/airport_bg.png) no-repeat;
+  background:transparent url(/images/newbg/airport_intro_bg.png) no-repeat;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%
 }
@@ -5522,7 +5522,7 @@ label {
   background-size:120.3% 150.9%
 }
 .health {
-  background:transparent url(/images/newbg/health_bg.png) no-repeat;
+  background:transparent url(/images/newbg/health_promo.png) no-repeat;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%
 }
@@ -5547,7 +5547,7 @@ label {
   background-size:120.3% 150.9%
 }
 .international {
-  background:transparent url(/images/newbg/international_bg.png) no-repeat;
+  background:transparent url(/images/newbg/international_intro_bg.png) no-repeat;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%
 }
