@@ -1721,7 +1721,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#0007;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -1936,7 +1936,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#0007;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2414,7 +2414,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#0001;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -3150,7 +3150,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#0001;
+  background:#241e95;
   height:42.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -3337,7 +3337,7 @@ html, body {
   height:115px;
   position:absolute;
   left:256px;
-  top:65.5px;
+  top:56.5px;
   font-weight:700;
   font-size:51.5px;
   transform:scale(99%,112%);
@@ -4154,7 +4154,7 @@ html, body {
   z-index:388687
 }
 .info-slide-content.internationalforecast .thing .thingbg {
-  background:#0009;
+  background:#241e95;
   height:52.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -4378,7 +4378,7 @@ html {
   overflow:hidden;
   background-color:#fff;
   transform:translate(-50%,-50%);
-  width:1440px;
+  width:1920px;
   height:1080px
 }
 .logocontainer {
@@ -4838,8 +4838,7 @@ label {
   height:60px;
   z-index:4;
   text-shadow:2px 2px 3px #000;
-  line-height:24.5px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  line-height:24.5px
 }
 .bulletin .info-subheader {
   font-family:ibm plex sans;
@@ -6333,11 +6332,11 @@ label {
 }
 #barcuzwhynot {
   position: absolute;
-  height: 35px;
-  left: 50%;
+  height: 55px;
+  left: 50.2%;
   top: 12.8%;
-  width: 500px;
-  z-index: 5;
+  width: 2000px;
+  z-index: 1
 }
 .severe-city-info-slide .info-subheader {
 }
