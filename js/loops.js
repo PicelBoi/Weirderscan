@@ -41,6 +41,13 @@ function Loops() {
 			$('#current-info-severe').fadeOut(0)
 			$('#current-info-details').fadeOut(0)
 			$('#current-noreport').fadeIn(0)
+			$('#tonight-temp').fadeOut(0)
+			$('#tonight-info').fadeOut(0)
+			$('#tonight-title').fadeOut(0)
+			$('#tmrw-temp').fadeOut(0)
+			$('#tmrw-info').fadeOut(0)
+			$('#tmrw-title').fadeOut(0)
+			
 		} else {
 			if (displayingAtmospheric == false) {
 				if (loopssevereweathermode == false) { displayAtmospheric(0)	} else { displaySevereAtmospheric(0) }
@@ -57,6 +64,10 @@ function Loops() {
 			$('#current-temp').text( weatherInfo.currentCond.sidebar.temp ) ;
 			//$('#conditions-icon').css('background-image', 'url("' + getCCicon(+weatherInfo.currentCond.sidebar.icon, weatherInfo.currentCond.sidebar.windspeed) + '")');
 			getCCicon('#conditions-icon', weatherInfo.currentCond.sidebar.icon, weatherInfo.currentCond.sidebar.windspeed)
+			$('#tmrw-temp').text(weatherInfo.tmrwCond.sidebar.temp);
+			$('#tmrw-info').text(weatherInfo.tmrwCond.sidebar.cond);
+			$('#tonight-temp').text(weatherInfo.currentCond.sidebar.temp);
+			$('#tonight-info').text(weatherInfo.currentCond.sidebar.cond);
 		}
 	}
 

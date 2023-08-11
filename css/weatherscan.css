@@ -2,6 +2,10 @@
 @import 'https://api.fonts.coollabs.io/css2?family=IBM Plex Mono&display=swap';
 @import 'https://api.fonts.coollabs.io/css2?family=Overpass&display=swap';
 @import 'https://api.fonts.coollabs.io/css2?family=Overpass Mono&display=swap';
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
 .mapboxgl-ctrl-attrib {
   display:none
 }
@@ -1246,7 +1250,7 @@
   transform:scale(104.5%,100%)
 }
 .info-slide-content.extended-forecast .frost-pane.iw .temphigh {
-  background:linear-gradient(to right,rgba(90,138,236,1) 0,rgba(90,138,236,0.89715) 100%)
+  background:linear-gradient(to right,rgb(0, 0, 0) 0,rgba(28, 28, 28, 0.9) 100%);
 }
 .info-slide-content.extended-forecast .frost-pane.iiw .temphigh {
   background:linear-gradient(to right,rgba(90,138,236,0.8933) 0,rgba(90,138,236,0.79045) 100%)
@@ -1504,7 +1508,7 @@
   transform:translate(0,45px);
   max-height:203.725px;
   background-color:#2a3a8a;
-  background:linear-gradient(to right,rgb(42,58,138,0) 0,rgb(42,58,138,.75) 100%)
+  background:linear-gradient(to right,rgb(42,58,138,0) 0,rgba(130, 130, 130, 0.75) 100%);
 }
 .info-slide-content.almanac .frost-pane.purple .sunrisetitle {
   font-family:IBM Plex Sans;
@@ -3110,7 +3114,7 @@
   height:150px;
   position:absolute;
   left:241px;
-  top:44px;
+  top:123px;
   font-weight:700;
   font-size:51.5px;
   transform:scale(99%,112%);
@@ -3383,7 +3387,7 @@
   text-align:right;
   position:absolute;
   top:30px;
-  right:55px
+  right:-29px;
 }
 .info-slide-content.teetime {
   flex-direction:row
@@ -4334,6 +4338,17 @@ p {
   font-style:normal;
   
 }
+#date {
+  position:absolute;
+  left: 99%;
+  top: 59%;
+  width: max-content;
+}
+#time {
+  position:absolute;
+  left: 1%;
+  top: 104%;
+}
 html * {
   box-sizing:border-box;
   font-size:100%
@@ -4654,7 +4669,8 @@ label {
 #main>#template {
   display:block;
   max-height:100%;
-  max-width:100%
+  max-width:100%;
+  z-index: 1
 }
 .leaflet-bottom,
 .leaflet-top {
@@ -4681,7 +4697,7 @@ label {
   margin-right:-75px;
   box-shadow:0 3px 10px 0 rgba(0,0,0,.35);
   background-color:#001668;
-  background:radial-gradient(farthest-corner at 963px 569px,#000d28,#001668)
+  background:radial-gradient(farthest-corner at 963px 569px,#000,#000);
 }
 .info-slides-header,
 .info-slide .info-subheader {
@@ -4694,7 +4710,7 @@ label {
   position:absolute;
   top:-2.5px;
   left:2.5px;
-  background-color:#4682b4;
+  background-color:#171717;
   height:40.5px;
   font-size:31px;
   white-space:nowrap;
@@ -4847,7 +4863,9 @@ label {
   top:50%;
   transform:translateY(-42.5%) scale(118%,100%)!important;
   transform-origin:left;
-  font-size:32px
+  font-size:32px;
+  opacity: 60;
+  z-index: 3
 }
 .info-slide-content br {
   position:relative!important
@@ -5607,6 +5625,9 @@ label {
 #city,
 #current-conditions *,
 #date-time,
+#tmrw,
+#tonight,
+
 #date-time * {
   font-family:Overpass;
   font-weight:700;
@@ -5616,7 +5637,7 @@ label {
 }
 #date-time {
   position:absolute;
-  top:101px;
+  top:270px;
   width:458px;
   color:#fff;
   
@@ -5654,9 +5675,9 @@ label {
   position:absolute;
   text-align:left;
   margin-left:142px;
-  top:180px;
-  width:256px;
-  left:0;
+  top:245px;
+  width:320px;
+  left:18.5%;
   
   
 }
@@ -5665,6 +5686,26 @@ label {
   position:absolute;
   top:376px;
   left:0;
+  height:221px;
+  width:452px;
+  text-align:left;
+  z-index:4
+}
+#tonight {
+  font-family:Overpass;
+  position:absolute;
+  top:630px;
+  left:23%;
+  height:221px;
+  width:452px;
+  text-align:left;
+  z-index:4
+}
+#tmrw {
+  font-family:Overpass;
+  position:absolute;
+  top:376px;
+  left:23%;
   height:221px;
   width:452px;
   text-align:left;
@@ -5683,6 +5724,26 @@ label {
   z-index:0
 }
 #now {
+  font-size:46px;
+  position:absolute;
+  top:31.5px;
+  left:40px;
+  letter-spacing:2px;
+  text-align:left;
+  transform:scale(105%,100%);
+  transform-origin:left
+}
+#tonight-title {
+  font-size:46px;
+  position:absolute;
+  top:31.5px;
+  left:40px;
+  letter-spacing:2px;
+  text-align:left;
+  transform:scale(105%,100%);
+  transform-origin:left
+}
+#tmrw-title {
   font-size:46px;
   position:absolute;
   top:31.5px;
@@ -5712,7 +5773,55 @@ label {
   transform:scale(102.5%,100%);
   transform-origin:left
 }
+#tonight-temp {
+  font-size:69px;
+  position:absolute;
+  top:88px;
+  left:-155px;
+  text-align:center;
+  width:100%;
+  transform:scale(102.5%,100%);
+  transform-origin:left
+}
+#tmrw-temp {
+  font-size:69px;
+  position:absolute;
+  top:88px;
+  left:-155px;
+  text-align:center;
+  width:100%;
+  transform:scale(102.5%,100%);
+  transform-origin:left
+}
 #current-info {
+  font-family:pressurearrow,Overpass;
+  font-size:31px;
+  position:absolute;
+  left:40px;
+  top:177px;
+  text-align:left;
+  width:62.5%;
+  font-weight:400;
+  line-height:117.5%;
+  transform:scale(106%,100%);
+  transform-origin:left;
+  white-space:normal
+}
+#tmrw-info {
+  font-family:pressurearrow,Overpass;
+  font-size:31px;
+  position:absolute;
+  left:40px;
+  top:177px;
+  text-align:left;
+  width:62.5%;
+  font-weight:400;
+  line-height:117.5%;
+  transform:scale(106%,100%);
+  transform-origin:left;
+  white-space:normal
+}
+#tonight-info {
   font-family:pressurearrow,Overpass;
   font-size:31px;
   position:absolute;
@@ -5808,7 +5917,7 @@ label {
   height:41px;
   left:0;
   top:637px;
-  text-align:center;
+  text-align:end;
   color:#d4d4d4;
   font-size:23.5px;
   padding:7px 14px 0 0;
@@ -5838,7 +5947,7 @@ label {
   width:50%;
   right:0;
   top:63.05%;
-  background:#8cadd1;
+  background:#000;
   box-shadow:0 3px 10px 0 rgba(0,0,0,.35)
 }
 .forecast-header {
@@ -5847,7 +5956,7 @@ label {
   max-height:21.25%;
   font-size:29px;
   padding-left:.95%;
-  background:#171717
+  background:#000;
 }
 .forecast-header * {
   font-family:Overpass;
@@ -6119,20 +6228,22 @@ label {
   position:absolute;
   width:100%;
   top:0%;
-  right:0%
+  right:0%;
+  background-color: rgba(0,0,0,0.7);
+  
 }
 #arrow-img {
   display:block;
   position:absolute;
   height:3.7%;
-  left:24%;
-  top:896px;
+  left:23.5%;
+  top:900px;
   z-index:6
 }
 #marquee1 {
   position:absolute;
   color:#ddd;
-  left:40%;
+  left:23.8%;
   top:895px;
   width:68.507%;
   height:43px;
@@ -6150,7 +6261,7 @@ label {
 #marquee-background {
   position:absolute;
   color:#fff;
-  left:24%;
+  left:23.5%;
   top:896px;
   width:92.5%;
   height:41px;
@@ -6163,10 +6274,10 @@ label {
 #marquee2 {
   color:#fff;
   position:absolute;
-  left:24%;
+  left:23.5%;
   top:938px;
   width:72.5%;
-  height:5%;
+  height:5.4%;
   font-size:41.5px;
   font-weight:400;
   padding-top:.52%;
@@ -6174,7 +6285,8 @@ label {
   transform:scale(110%,100%);
   transform-origin:left;
   filter:drop-shadow(.5px 0 0 #171717);
-  background-color: #171717
+  background-color: rgba(0,0,0,0.5);
+  line-height: 30px
 }
 .marqueeheadersevere {
   font-synthesis:weight;
@@ -6218,6 +6330,14 @@ label {
 }
 .severe-city-info-slide .info-subheadershadowfix {
 }
+#barcuzwhynot {
+  position: absolute;
+  height: 55px;
+  left: 50.2%;
+  top: 12.8%;
+  width: 2000px;
+  z-index: 1
+}
 .severe-city-info-slide .info-subheader {
 }
 .info-slide .info-subheadershadowfix span {
@@ -6238,7 +6358,8 @@ label {
   transform:translateY(-43.5%) scale(105.9%,100%);
   transform-origin:right;
   right:90px;
-  font-stretch:semi-expanded
+  font-stretch:semi-expanded;
+  z-index: 3
 }
 .bulletin {
   background:transparent url(/images/newbg/weather_bulletin_bg.png) no-repeat;
@@ -6265,7 +6386,7 @@ label {
   position:absolute;
   left:451px;
   top:86.9%;
-  width:68.7%;
+  width:76.7%;
   height:56px;
   font-size:46px;
   padding-top:.25%;

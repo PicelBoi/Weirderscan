@@ -92,6 +92,7 @@ function getMainLoc(configFailed) {
       grabalmanacSlidesData()
       grabHealthData()
       grabSideandLowerBarData()
+      pbTMRW()
     });
   } else if (locationSettings.mainLocation.searchQuery.type && configFailed != true) {
     if (locationSettings.mainLocation.searchQuery.type == "geocode") {
@@ -108,6 +109,7 @@ function getMainLoc(configFailed) {
         grabalmanacSlidesData()
         grabHealthData()
         grabSideandLowerBarData()
+        pbTMRW()
       });
     } else {
       $.getJSON("https://api.weather.com/v3/location/search?query="+locationSettings.mainLocation.searchQuery.val+"&locationType="+locationSettings.mainLocation.searchQuery.type+"&fuzzyMatch="+locationSettings.mainLocation.searchQuery.fuzzy+((locationSettings.mainLocation.searchQuery.country) ? "&countryCode="+locationSettings.mainLocation.searchQuery.country : "")+((locationSettings.mainLocation.searchQuery.state) ? "&adminDistrictCode="+locationSettings.mainLocation.searchQuery.state : "")+"&language=en-US&format=json&apiKey=" + api_key, function(data) {
@@ -124,6 +126,7 @@ function getMainLoc(configFailed) {
           grabalmanacSlidesData()
           grabHealthData()
           grabSideandLowerBarData()
+          pbTMRW()
       });
     }
   } else {
@@ -141,6 +144,7 @@ function getMainLoc(configFailed) {
       grabalmanacSlidesData()
       grabHealthData()
       grabSideandLowerBarData()
+      pbTMRW()
     });
 
   }
@@ -303,6 +307,13 @@ function getExtraLocs(lat,lon, onInit, whichReset) {
 
 
 var weatherInfo = { currentCond: {
+  sidebar: {noReport:false,displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},visibility:"",uvidx:"",ceiling:""},
+  //loc:{noReport:"",displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",pressureTrend:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},},
+  weatherLocs:[],
+  //cityLoc:{noReport:false,displayname:"",temp:"",icon:"",wind:"",windspeed:""}
+  city8slides:{noReport:false, cities:[]},
+},
+tmrwCond: {
   sidebar: {noReport:false,displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},visibility:"",uvidx:"",ceiling:""},
   //loc:{noReport:"",displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",pressureTrend:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},},
   weatherLocs:[],
@@ -956,6 +967,43 @@ function grabSideandLowerBarData() {
     weatherInfo.fiveDay.lowerbar.noReport = true
   });
 }
+function pbTMRW() {
+  weatherInfo.bulletin.marqueewarnings = [];
+  weatherInfo.bulletin.severewarnings = [];
+  var url = "https://api.weather.com/v3/wx/forecast/daily/3day?geocode="
+  url += `${maincitycoords.lat},${maincitycoords.lon};`
+  url += "&language=en-US&units=e&format=json&apiKey=" + api_key
+
+  $.getJSON(url, function(data) {
+        var ajaxedLoc = data[0]
+        if (ajaxedLoc == null) {
+          weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
+          weatherInfo.tmrwCond.sidebar.noReport = true
+          
+        } else {
+          if (ajaxedLoc["v3-wx-forecast-daily-3day"] == null) {
+            weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
+            weatherInfo.tmrwCond.sidebar.noReport = true
+          } else {
+            weatherInfo.tmrwCond.sidebar.temp = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1]
+            weatherInfo.tmrwCond.sidebar.cond = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].wxPhraseLong[1]
+            weatherInfo.tmrwCond.sidebar.icon = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].iconCode[1]
+            weatherInfo.tmrwCond.sidebar.humid = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].relativeHumidity[1]
+            weatherInfo.tmrwCond.sidebar.wind = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windDirectionCardinal == "CALM" || ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed == 0) ? 'calm' :  ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windDirectionCardinal) + ' ' + ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed === 0) ? '' : ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed)
+            weatherInfo.tmrwCond.sidebar.uvidx = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].uvDescription[1]
+            weatherInfo.tmrwCond.sidebar.feelslike.type = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureHeatIndex[1]) ? "heat index" : ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureWindChill[1] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1]) ? "wind chill" : "dontdisplay"))
+            weatherInfo.tmrwCond.sidebar.feelslike.val = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureFeelsLike[1]
+            weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
+          }
+          
+          
+  }
+  }).fail(function() {
+    weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
+    weatherInfo.tmrwCond.sidebar.noReport = true
+  });
+}
+
 function grabalmanacSlidesData() {
   url = 'https://api.weather.com/v3/aggcommon/v3-wx-almanac-daily-1day;v3-wx-observations-current?geocode=' + maincitycoords.lat + ',' + maincitycoords.lon + "&format=json&language=en-US&units=e" + "&day=" + dateFns.format(new Date(), "D") + "&month=" + dateFns.format(new Date(),"M") + "&apiKey=" + api_key
     $.getJSON(url, function(data) {
@@ -1287,6 +1335,7 @@ function pullCCTickerData() {
 //loop data collection, slide loops data functions is done based on full cycle
 setInterval(function(){
   grabSideandLowerBarData();
+  pbTMRW();
   pullCCTickerData();
 }, 300000)
 

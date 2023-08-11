@@ -290,7 +290,7 @@
       const bg = document.querySelector('body');
       var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
       
-      bg.style.cssText = ('background: url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg"); background-size: cover; background-position: center; '); 
+      bg.style.cssText = ('background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg"); background-size: cover; background-position: center; '); 
       </script>
       <form action="/action_page.php">
       <div class=textfield>
@@ -497,7 +497,8 @@
   </div>
 
 <div id="main" class="container">
- 
+  <div id="barcuzwhynot" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));">
+  </div>
   <img id="logo" src="images/weatherlogos.png"/>
   <img id="template" src="images/template-4k.png"/>
   <div id="info-slides-bg"></div>
@@ -1998,7 +1999,21 @@
     <div id="current-info-severe" style="display:"></div>
     <div id="current-info-details" style="display: none"></div>
   </div>
+  <div id="tonight">
+    <div id="tonight-title">tonight</div>
+    <div id="tonight-info"></div>
+    <div id="tonight-temp"></div>
+    <div id="tonight-noreport" style="display: none">no report</div>
+    <div id="tonight-info-details" style="display: none"></div>
 
+  </div>
+  <div id="tmrw">
+    <div id="tmrw-title">tomorrow</div>
+    <div id="tmrw-info"></div>
+    <div id="tmrw-temp"></div>
+    <div id="tmrw-noreport" style="display: none">no report</div>
+    <div id="tmrw-info-details" style="display: none"></div>
+  </div>
   <div id="minimap-cover" style="display:none">
     <div class="gradient1"></div>
     <div class="gradient2"></div>
