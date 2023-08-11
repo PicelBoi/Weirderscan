@@ -4378,7 +4378,7 @@ html {
   overflow:hidden;
   background-color:#fff;
   transform:translate(-50%,-50%);
-  width:1920px;
+  width:1440px;
   height:1080px
 }
 .logocontainer {
@@ -6038,8 +6038,8 @@ label {
 }
 .forecast-tile {
   position:relative;
-  background:#484848;
-  background:linear-gradient(to right,#484848 0,#808080 100%)
+  background:#000000;
+  background:linear-gradient(to right,#000000 0,#171717 100%)
 }
 .forecast-tile:last-child {
   flex-grow:100;
