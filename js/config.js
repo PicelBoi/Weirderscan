@@ -104,11 +104,11 @@ var locationSettings = {
   },
   extraLocations: {
     useAutoLocations: true, //Will add automatically searched locations to the list.
-    maxLocations: 4, //Will limit amount of locations that appear on sim. Default is 3.
-    locationOrderNum:[5,4,3,9], //Ordernum for automatically generated locations. Lower number will be placed closer to the front.
+    maxLocations: 7, //Will limit amount of locations that appear on sim. Default is 3.
+    locationOrderNum:[5,4,3,9,2,6,1], //Ordernum for automatically generated locations. Lower number will be placed closer to the front.
     locs:[
     {
-      displayName:'',
+      displayName:'New York',
       orderNum:2,
       searchQuery:{
         type:"",
@@ -120,24 +120,24 @@ var locationSettings = {
       }
     },
     {
-      displayName:"",
+      displayName:"Beijing",
       orderNum:6,
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"US",
+        country:"CN",
         state:"",
         val:"39.90806,116.36052",
         searchResultNum:"",
       }
     },
     {
-      displayName:"",
+      displayName:"Tokyo",
       orderNum:1,
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"US",
+        country:"JP",
         state:"",
         val:"35.6762,139.6503",
         searchResultNum:"",
