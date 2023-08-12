@@ -4377,8 +4377,8 @@ html {
   left:50%;
   overflow:hidden;
   transform:translate(-50%,-50%);
-  width:100vw;
-  height:100vh;
+  width: 1920px;
+  height: 1080px;
   will-change:transform;
 
 }
@@ -4389,8 +4389,8 @@ html {
   overflow:hidden;
   background-color:rgba(0,0,0,.8);
   transform:translate(-50%,-50%);
-  width:100vw;
-  height:100vh;
+  width: 1920px;
+  height: 1080px;
   display: flex;
 }
 .logocontainer {
@@ -5152,8 +5152,8 @@ label {
 }
 #videobg {
   object-fit: cover;
-  width: 100vw;
-  height: 100vh;
+  width: 1920px;
+  height: 1080px;
   position: fixed;
   top: 0;
   left: 0;
