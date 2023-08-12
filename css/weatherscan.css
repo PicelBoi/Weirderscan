@@ -4380,10 +4380,7 @@ html {
   width:1920px;
   height:1080px;
   will-change:transform;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 #startup {
   position:relative;
