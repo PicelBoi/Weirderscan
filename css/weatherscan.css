@@ -1139,6 +1139,7 @@ html, body {
   transform-origin:left;
   letter-spacing:1.5px;
   word-wrap: break-word;
+  font-size: 42;
 }
 .info-slide-content.extended-forecast {
   width:100%
@@ -2409,18 +2410,18 @@ html, body {
   padding-left:2.5px;
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:33px;
+  font-size:24px;
   padding-top:4px;
   text-shadow:2px 2px 4px #000;
   transform:scale(105%,100%);
-  padding-left:62.5px;
+  padding-left:63.5px;
   transform-origin:left
 }
 .info-slide-content.health-forecast .thing .thingbg {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2500,7 +2501,7 @@ html, body {
   height:40.5px;
   text-transform:none;
   font-family:Shin Go Ultra;
-  background:linear-gradient(to right,rgba(33,27,140,1) 0,rgba(33,27,140,0) 93%)
+  background:linear-gradient(to right,rgba(0,0,0,1) 0,rgba(0,0,0,0) 93%);
 }
 .info-slide-content.health-forecast .frost-pane.forecastdetails .title span {
   display:block;
@@ -2576,7 +2577,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2610,7 +2611,7 @@ html, body {
   font-family:Shin Go Ultra;
   transform:scale(115%,100%) translate(0,-3.5px);
   transform-origin:left;
-  font-size:34px
+  font-size:23px;
 }
 .info-slide-content.allergy .frost-pane.pollen .pollenbar .treetype {
   font-size:29px;
@@ -2703,8 +2704,8 @@ html, body {
   display:flex;
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:32.5px;
-  line-height:125%;
+  font-size:23.5px;
+  line-height:129%;
   text-shadow:2px 2px 4px #000;
   padding-left:52.5px;
   padding-top:7.5px;
@@ -2717,7 +2718,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000;
   height:102.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2763,7 +2764,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2775,7 +2776,7 @@ html, body {
   width:100%;
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:33px;
+  font-size:22px;
   padding-top:4px;
   text-shadow:2px 2px 4px #000;
   height:35px;
@@ -2796,17 +2797,17 @@ html, body {
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-72px -364px;
   mask-size:1065px 1164px;
-  background:#1374f1
+  background:#272727;
 }
 .info-slide-content.Aches-Breath .frost-pane .whitetitle {
-  font-size:33px;
+  font-size:25px;
   font-family:Shin Go Ultra;
   transform:scale(117%,100%);
   transform-origin:left
 }
 .info-slide-content.Aches-Breath .frost-pane .desc {
   font-family:Shin Go Ultra;
-  font-size:26.5px;
+  font-size:18.5px;
   color:#16bfdd;
   position:absolute;
   left:20px;
@@ -2829,7 +2830,7 @@ html, body {
 .info-slide-content.Aches-Breath .frost-pane.breath .whitetitle {
   position:absolute;
   top:55px;
-  font-size:34px;
+  font-size:25px;
   left:17.5px
 }
 .info-slide-content.Aches-Breath .frost-pane.breath {
@@ -2842,7 +2843,7 @@ html, body {
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-72px -577px;
   mask-size:1065px 1164px;
-  background:#1718d7
+  background:#171717;
 }
 .info-slide-content.Aches-Breath .frost-pane .bar {
   height:23px;
@@ -2899,7 +2900,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#2a3a8a;
+  background:#000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2911,7 +2912,7 @@ html, body {
   width:100%;
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:33px;
+  font-size:24px;
   padding-top:4px;
   text-shadow:2px 2px 4px #000;
   height:35px;
@@ -2983,7 +2984,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#2a3a8a;
+  background:#000;
   height:90px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2995,8 +2996,8 @@ html, body {
   width:88%;
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:35px;
-  line-height:115%;
+  font-size:23px;
+  line-height:155%;
   text-shadow:2px 2px 4px #000;
   height:90px;
   left:0;
@@ -3107,8 +3108,8 @@ html, body {
   width:115px;
   height:115px;
   position:absolute;
-  left:182.5px;
-  top:22px;
+  left:208.5px;
+  top:20px;
   font-weight:600;
   font-style:italic;
   font-size:62px;
@@ -3133,8 +3134,8 @@ html, body {
   width:100px;
   height:80px;
   position:absolute;
-  left:406px;
-  top:34px;
+  left:463px;
+  top:20px;
   font-size:62px;
   transform:scale(109%,100%);
   color:#df4541
@@ -3156,7 +3157,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#171717;
   height:42.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -3330,8 +3331,8 @@ html, body {
   width:115px;
   height:115px;
   position:absolute;
-  left:197.5px;
-  top:42px;
+  left:208.5px;
+  top:20px;
   font-weight:600;
   font-style:italic;
   font-size:62px;
@@ -3343,7 +3344,7 @@ html, body {
   height:115px;
   position:absolute;
   left:256px;
-  top:22px;
+  top:20px;
   font-weight:700;
   font-size:51.5px;
   transform:scale(99%,112%);
@@ -3356,8 +3357,8 @@ html, body {
   width:100px;
   height:80px;
   position:absolute;
-  left:435px;
-  top:23.5px;
+  left:463px;
+  top:20px;
   font-size:62px;
   transform:scale(109%,100%);
   color:#df4541
@@ -4323,7 +4324,7 @@ html, body {
   transform:scale(112.5%,100%);
   transform-origin:left;
   color:#fff;
-  font-size:40px;
+  font-size:30px;
   position:absolute;
   left:50px;
   top:62.5px;

@@ -1688,7 +1688,7 @@ var mainMap
 		}
 
 		function resizeText(text){
-			var s = 52,
+			var s = 42,
 				$container = $('.info-slide-content.forecast .content'),
 				$test = $('<div style="position:absolute;top:100%;"></div>') .appendTo($container) .css('font-size', s + 'px') .css('line-height', '125%') .html(text);
 
