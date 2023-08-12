@@ -1,2 +1,9 @@
 node_modules
 out
+Weirderscan-win32-x64
+Weirderscan-darwin-x64.zip
+Weirderscan-linux-x64.zip
+main.js
+package.json
+package-lock.json
+preload.js
