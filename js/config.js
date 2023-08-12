@@ -125,7 +125,7 @@ var locationSettings = {
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"CN",
+        country:"US",
         state:"",
         val:"39.90806,116.36052",
         searchResultNum:"",
@@ -137,7 +137,7 @@ var locationSettings = {
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"JP",
+        country:"US",
         state:"",
         val:"35.6762,139.6503",
         searchResultNum:"",
