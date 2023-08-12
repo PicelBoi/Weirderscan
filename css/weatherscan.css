@@ -3383,7 +3383,7 @@ html, body {
 }
 .info-slide-content.moreinfoimage .frost-pane {
   background-color:transparent;
-  background:url(/images/newbg/health_promo.png);
+  background:rgba(0,0,0,0.7);
   background-repeat:no-repeat;
   background-position:-19px 0;
   background-size:955px 446px
@@ -5123,7 +5123,7 @@ label {
   background-position:-127px -112px
 }
 .health-slide-intro {
-  background:transparent url(/images/newbg/health_intro_bg.png) no-repeat bottom;
+  background:transparent url(/images/newbg/health_promo.png) no-repeat bottom;
   background-size:1068px 788px;
   background-position:-127px -112px
 }

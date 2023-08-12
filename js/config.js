@@ -104,7 +104,7 @@ var locationSettings = {
   },
   extraLocations: {
     useAutoLocations: true, //Will add automatically searched locations to the list.
-    maxLocations: 7, //Will limit amount of locations that appear on sim. Default is 3.
+    maxLocations: 7, //Will limit amount of locations that appear on sim. Default is 7.
     locationOrderNum:[5,4,3,9,2,6,1], //Ordernum for automatically generated locations. Lower number will be placed closer to the front.
     locs:[
     {
@@ -146,94 +146,42 @@ var locationSettings = {
   ]},
   aroundCityInfoLocs: {
     useAutoLocations: true, //Will add automatically searched locations to the list.
-    maxLocations: 8, //Will limit amount of locations that appear on sim. Default is 8. Hard Limit is 8.
-    locationOrderNum:[5,4,3], //Ordernum for automatically generated locations. Lower number will be placed closer to the front.
+    maxLocations: 6, //Will limit amount of locations that appear on sim. Default is 8. Hard Limit is 8.
+    locationOrderNum:[5,4,3,2,6,1], //Ordernum for automatically generated locations. Lower number will be placed closer to the front.
     locs:[//Cities for the nearby cities slide
     {
-      displayName:"",
+      displayName:'New York',
+      orderNum:2,
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"",
-        state:"",
-        val:"",
+        country:"US",
+        state:"NY",
+        val:"40.730610, -73.935242",
         searchResultNum:"",
       }
     },
     {
-      displayName:"",
+      displayName:"Beijing",
+      orderNum:6,
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"",
+        country:"CN",
         state:"",
-        val:"",
+        val:"39.90806,116.36052",
         searchResultNum:"",
       }
     },
     {
-      displayName:"",
+      displayName:"Tokyo",
+      orderNum:1,
       searchQuery:{
         type:"",
         fuzzy:true,
-        country:"",
+        country:"JP",
         state:"",
-        val:"",
-        searchResultNum:"",
-      }
-    },
-    {
-      displayName:"",
-      searchQuery:{
-        type:"",
-        fuzzy:true,
-        country:"",
-        state:"",
-        val:"",
-        searchResultNum:"",
-      }
-    },
-    {
-      displayName:"",
-      searchQuery:{
-        type:"",
-        fuzzy:true,
-        country:"",
-        state:"",
-        val:"",
-        searchResultNum:"",
-      }
-    },
-    {
-      displayName:"",
-      searchQuery:{
-        type:"",
-        fuzzy:true,
-        country:"",
-        state:"",
-        val:"",
-        searchResultNum:"",
-      }
-    },
-    {
-      displayName:"",
-      searchQuery:{
-        type:"",
-        fuzzy:true,
-        country:"",
-        state:"",
-        val:"",
-        searchResultNum:"",
-      }
-    },
-    {
-      displayName:"",
-      searchQuery:{
-        type:"",
-        fuzzy:true,
-        country:"",
-        state:"",
-        val:"",
+        val:"35.6762,139.6503",
         searchResultNum:"",
       }
     },
