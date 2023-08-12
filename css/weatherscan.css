@@ -1497,7 +1497,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#2a3a8a;
+  background:#000000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2570,7 +2570,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2757,7 +2757,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
