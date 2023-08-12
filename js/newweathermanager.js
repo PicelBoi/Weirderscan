@@ -16,7 +16,7 @@ function spinything() {
   if (apperanceSettings.headinID) {
     $("#serialnumber").text("headend id:" + apperanceSettings.serialNumber)
   } else {
-    $("#serialnumber").text("serial number: TWCS"+"0"+Math.round(Math.random()*100000000))
+    $("#serialnumber").text("serial number: TPBC"+"0"+Math.round(Math.random()*100000000))
   }
   $("#affilatename").text("affiliatename: " + apperanceSettings.affilateName)
     rotatex = perlin.get(startxx, startxy)*2

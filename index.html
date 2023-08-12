@@ -24,7 +24,9 @@
 </head>
 
 <body class="bg" style="background-size: cover; background-position: center;">
-
+<video autoplay muted loop id="videobg">
+  <source id=cool">
+</video>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
@@ -291,8 +293,9 @@
       </div>
       <script>
       const bg = document.querySelector('body');
-      var indexbg = Math.floor(Math.random() * (22- 1)+ 1);
-      
+      const video = document.querySelector('cool');
+      var indexbg = Math.floor(Math.random() * (33- 1)+ 1);
+      video.src = ('https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg');
       bg.style.cssText = ('background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg"); background-size: cover; background-position: center; '); 
       </script>
       <form action="/action_page.php">
