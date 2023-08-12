@@ -104,7 +104,7 @@ var locationSettings = {
   },
   extraLocations: {
     useAutoLocations: true, //Will add automatically searched locations to the list.
-    maxLocations: 4, //Will limit amount of locations that appear on sim. Default is 3.
+    maxLocations: 7, //Will limit amount of locations that appear on sim. Default is 3.
     locationOrderNum:[5,4,3,9,1,2,3], //Ordernum for automatically generated locations. Lower number will be placed closer to the front.
     locs:[
     {
