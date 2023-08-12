@@ -1,4 +1,4 @@
-@import 'https://api.fonts.coollabs.io/css2?family=Shin Go Regular&display=swap';
+@import 'https://api.fonts.coollabs.io/css2?family=IBM Plex Sans&display=swap';
 @import 'https://api.fonts.coollabs.io/css2?family=IBM Plex Mono&display=swap';
 @import 'https://api.fonts.coollabs.io/css2?family=Overpass&display=swap';
 @import 'https://api.fonts.coollabs.io/css2?family=Overpass Mono&display=swap';
@@ -1128,7 +1128,7 @@ html, body {
   max-height:446.25px
 }
 .info-slide-content.forecast .content {
-  font-family:Shin Go Regular;
+  font-family:IBM Plex Sans;
   height:400px;
   max-height:400px;
   transform:translate(-2.5px,-2.5px) scale(115%,100%);
