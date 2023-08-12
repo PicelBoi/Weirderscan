@@ -12,6 +12,7 @@ function Loops() {
 }
 	function refreshObservationDisplay() {
 		var cond = weatherInfo.currentCond.sidebar.cond;
+		var kirby = weatherInfo.tmrwCond.sidebar.cond;
 		$('#city').text(maincitycoords.displayname);
 		$('#forecast-city').text(maincitycoords.displayname + ':');
 		if (weatherInfo.radarTempUnavialable == false) {
@@ -50,11 +51,17 @@ function Loops() {
 			
 		} else {
 			if (displayingAtmospheric == false) {
-				if (loopssevereweathermode == false) { displayAtmospheric(0)	} else { displaySevereAtmospheric(0) }
+				if (loopssevereweathermode == false) { displayAtmospheric(0) ;displayAtmospherictmrw(0)	} else { displaySevereAtmospheric(0) ;displaySevereAtmospherictmrw(0) }
 			}
 			$('#now').fadeIn(0)
 				$('#nowwide').fadeIn(0)
 			$('#current-temp').fadeIn(0)
+			$('#tmrw-temp').fadeIn(0)
+			$('#tmrw-info').fadeIn(0)
+			$('#tmrw-title').fadeIn(0)
+			$('#tonight-temp').fadeIn(0)
+			$('#tonight-info').fadeIn(0)
+			$('#tonight-title').fadeIn(0)
 			if (loopssevereweathermode == false) { $('#current-info').fadeIn(0) } else {
 				$('#current-info-severe').fadeIn(0);
 				$('#current-info-details').fadeIn(0);
@@ -78,6 +85,7 @@ function Loops() {
 		var displays = {
 			conditions() {
 				return (weatherInfo.currentCond.sidebar.cond).toLowerCase();
+				
 			},
 
 				wind(){ return 'wind ' + weatherInfo.currentCond.sidebar.wind; },
@@ -158,7 +166,72 @@ function Loops() {
 		}
 		} else {displayingAtmospheric = false}
 	} //end function
+	function displayAtmospherictmrw(idx) {
+		if (weatherInfo.tmrwCond.sidebar.noReport == false){
+		displayingAtmospheric = true;
+		var displays = {
+			conditionstmrw() {
+				return (weatherInfo.tmrwCond.sidebar.cond).toLowerCase();
+				
+			},
 
+				windtmrw(){ return 'wind ' + weatherInfo.tmrwCond.sidebar.wind; },
+
+				guststmrw(){
+					if ( weatherInfo.tmrwCond.sidebar.gust!=undefined ) {
+						return (weatherInfo.tmrwCond.sidebar.gust!="none") ? 'gusts ' +  weatherInfo.tmrwCond.sidebar.gust : '';
+					}
+				},
+
+				humiditytmrw(){ return 'humidity ' + weatherInfo.tmrwCond.sidebar.humid + '%'; },
+
+				dewpointtmrw(){ return 'dew point ' + weatherInfo.tmrwCond.sidebar.dewpt + '&deg;'; },
+
+				heatindex_windchilltmrw(){
+					if (weatherInfo.tmrwCond.sidebar.feelslike.type != "dontdisplay") {
+						return weatherInfo.tmrwCond.sidebar.feelslike.type + " " + weatherInfo.tmrwCond.sidebar.feelslike.val +  '&deg;'
+					}
+				},
+
+				pressuretmrw(){ return 'pressure ' + weatherInfo.tmrwCond.sidebar.pressure + ' ' + weatherInfo.tmrwCond.sidebar.pressureTrend},
+
+				visibilitytmrw() { return 'visibility ' + weatherInfo.tmrwCond.sidebar.visibility + ' mile' + (weatherInfo.tmrwCond.sidebar.visibility != 1 ? 's' : ''); },
+
+				uvindextmrw() { return 'UV index ' + weatherInfo.tmrwCond.sidebar.uvidx; },
+
+		},
+		keys = Object.keys(displays),
+		text = displays[ keys[idx] ]();
+
+		
+		
+		
+	} else {displayingAtmospheric = false}
+	}  // end function
+
+	function displaySevereAtmospherictmrw(idx) {
+		if (weatherInfo.tmrwCond.sidebar.noReport == false) {
+		displayingAtmospheric = true
+		$('#tmrw-info-severe').text((weatherInfo.tmrwCond.sidebar.cond).toLowerCase());
+		var displays = {
+			display1() {
+				return 'wind ' + weatherInfo.tmrwCond.sidebar.wind + '<br>' + ((weatherInfo.tmrwCond.sidebar.gust!="none") ? 'gusts ' +  weatherInfo.tmrwCond.sidebar.gust + '<br>' : '' ) + 'humidity ' + weatherInfo.tmrwCond.sidebar.humid + '%' + '<br>' + 'dew point ' + weatherInfo.tmrwCond.sidebar.dewpt + '&deg;'
+			},
+			display2() {
+				return (((weatherInfo.tmrwCond.sidebar.feelslike.type != "dontdisplay") ?  weatherInfo.tmrwCond.sidebar.feelslike.type + " " + weatherInfo.tmrwCond.sidebar.feelslike.val +  '&deg;' + '<br>' : '' ) + 'pressure ' + weatherInfo.tmrwCond.sidebar.pressure + weatherInfo.tmrwCond.sidebar.pressureTrend + '<br>' + 'visibility ' + weatherInfo.tmrwCond.sidebar.visibility + ((weatherInfo.tmrwCond.sidebar.visibility != 1 ) ? ' miles' : ' mile') + '<br>' + 'ceiling ' + ((weatherInfo.tmrwCond.sidebar.ceiling != null) ? ((weatherInfo.tmrwCond.sidebar.ceiling).toString() + ' ft') : ''))
+			}
+		},
+		keys = Object.keys(displays),
+		text = displays[ keys[idx] ]();
+
+		idx = (++idx===keys.length ? 0 : idx);
+		if (weatherInfo.reboot == true) {
+			$('#forecast-shadow').hide()
+			return;
+		}
+		
+		} else {displayingAtmospheric = false}
+	} //end function
 	function displayForecast(idx) {
 
 		var displays = {

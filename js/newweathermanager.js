@@ -314,7 +314,7 @@ var weatherInfo = { currentCond: {
   city8slides:{noReport:false, cities:[]},
 },
 tmrwCond: {
-  sidebar: {noReport:false,displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},visibility:"",uvidx:"",ceiling:""},
+  sidebar: {noReport:false,displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},uvidx:""},
   //loc:{noReport:"",displayname:"",temp:"",cond:"",icon:"",humid:"",dewpt:"",pressure:"",pressureTrend:"",wind:"",windspeed:"",gust:"",feelslike:{type:"",val:""},},
   weatherLocs:[],
   //cityLoc:{noReport:false,displayname:"",temp:"",icon:"",wind:"",windspeed:""}
@@ -328,7 +328,8 @@ tmrwCond: {
     {time:"",cond:"",icon:"",temp:"",wind:"",windspeed:""},
   ]},*/
   weatherLocs:[],
-}, dayDesc: {
+},
+dayDesc: {
   lowerbar: {noReport:false,displayname:"",day:[{name:"",desc:""},{name:"",desc:""},{name:"",desc:""},{name:"",desc:""}]},
   /*loc:{noReport:"",displayname:"",day:[
     {name:"",desc:""},
@@ -778,184 +779,185 @@ function grabSideandLowerBarData() {
             weatherInfo.currentCond.sidebar.feelslike.val = ajaxedLoc["v3-wx-observations-current"].temperatureFeelsLike
             weatherInfo.currentCond.sidebar.displayname = maincitycoords.displayname
           }
-          //day part
-          if (ajaxedLoc["v3-wx-forecast-hourly-2day"] == null) {
-            weatherInfo.dayPart.lowerbar.displayname = maincitycoords.displayname
-            weatherInfo.dayPart.lowerbar.noReport = true
-          } else {
-            //functions converting hourly data into daypart
-            var indexes = calcHourlyReport(ajaxedLoc["v3-wx-forecast-hourly-2day"]);
-            function buildHourlyTimeTitle(time){
-              var hour=dateFns.getHours(time);
-              if (hour===0) {
-                return 'Midnight';
-              } else if (hour===12){
-                return 'Noon';
-              }
-              return (dateFns.format(time,'h a'))//.replace(" ", "");
-            }
-            //get reporting hours: 12am, 6am, 12pm, 3pm, 5pm, 8pm...
-            function calcHourlyReport(data) {
-              var ret = [],
-                targets = [0, 6, 12, 15, 17, 20],   // hours that we report
-                current = dateFns.getHours(new Date()),
-                now = new Date(),
-                //firsthour = targets[ getNextHighestIndex(targets, current) ],
-                start,
-                hour, hi=0;
-
-              switch (true) {
-                case (current < 3):
-                  start = 6; //before 3:00
-                case (current < 9):
-                  start = 12; break; //before 9:00 after 3:00
-                case (current < 12):
-                  start = 15; break; //before 12:00 after 9:00
-                case (current < 14):
-                  start = 17; break; //before 2:00 after 12:00
-                case (current < 17):
-                  start = 20; break; //before 5:00 after 2:00
-                case (current < 20):
-                    start = 0; break; //before 8:00 after 5:00
-                default:
-                  start = 6;
-              }
-              while(ret.length<4){
-                // hour must be equal or greater than current
-                hour = dateFns.getHours(data.validTimeLocal[hi] );
-                if ( dateFns.isAfter(data.validTimeLocal[hi], now) && (hour==start || ret.length>0) )  {
-                  if ( targets.indexOf(hour)>=0 ) { // it is in our target list so record its index
-                    ret.push(hi);
-                  }
-                }
-                hi++;
-              }
-              return ret;
-            }
-            function buildHourlyHeaderTitle(time) {
-              var today = new Date(),
-                tomorrow = dateFns.addDays(today, 1);
-                sforecast = "'s Forecast";
-
-              // title based on the first hour reported
-              switch (dateFns.getHours(time)) {
-
-                case 6: // 6 - Nextday's Forecast / Today's Forecast
-              		// if 6am today
-              		if (dateFns.isToday(time)) {
-              			return dateFns.format(today, 'dddd') + sforecast;
-              		}
-              	case 0: // 0 - Nextday's Forecast
-              		return dateFns.format(tomorrow, 'dddd') + sforecast;
-
-              	case 12:
-              		return 'This Afternoon';
-
-              	case 15:
-              		return "Today's Forecast";
-
-              	case 17:
-              		return "Tonight's Forecast";
-
-              	case 20:
-              		return dateFns.format(today, 'ddd') + ' Night/' + dateFns.format(tomorrow, 'ddd');
-
-              }
-            }
-
-            weatherInfo.dayPart.lowerbar.daytitle = buildHourlyHeaderTitle(ajaxedLoc["v3-wx-forecast-hourly-2day"].validTimeLocal[indexes[0]])
-            for (var hi = 0; hi < 4; hi++) {
-              weatherInfo.dayPart.lowerbar.hour[hi].time = buildHourlyTimeTitle(ajaxedLoc["v3-wx-forecast-hourly-2day"].validTimeLocal[indexes[hi]])
-              weatherInfo.dayPart.lowerbar.hour[hi].cond = ajaxedLoc["v3-wx-forecast-hourly-2day"].wxPhraseLong[indexes[hi]].replace('Scattered ', "Sct'd ").replace('Thunderstorms',"T'Storms").replace('Thundershowers',"T'Showers").replace('/',', ')
-              weatherInfo.dayPart.lowerbar.hour[hi].icon = ajaxedLoc["v3-wx-forecast-hourly-2day"].iconCode[indexes[hi]]
-              weatherInfo.dayPart.lowerbar.hour[hi].temp = ajaxedLoc["v3-wx-forecast-hourly-2day"].temperature[indexes[hi]]
-              weatherInfo.dayPart.lowerbar.hour[hi].wind = ajaxedLoc["v3-wx-forecast-hourly-2day"].windDirectionCardinal[indexes[hi]] + ' ' + ajaxedLoc["v3-wx-forecast-hourly-2day"].windSpeed[indexes[hi]]
-              weatherInfo.dayPart.lowerbar.hour[hi].windspeed= ajaxedLoc["v3-wx-forecast-hourly-2day"].windSpeed[indexes[hi]]
-            }
-            weatherInfo.dayPart.lowerbar.displayname = maincitycoords.displayname
+       //day part
+       if (ajaxedLoc["v3-wx-forecast-hourly-2day"] == null) {
+        weatherInfo.dayPart.lowerbar.displayname = maincitycoords.displayname
+        weatherInfo.dayPart.lowerbar.noReport = true
+      } else {
+        //functions converting hourly data into daypart
+        var indexes = calcHourlyReport(ajaxedLoc["v3-wx-forecast-hourly-2day"]);
+        function buildHourlyTimeTitle(time){
+          var hour=dateFns.getHours(time);
+          if (hour===0) {
+            return 'Midnight';
+          } else if (hour===12){
+            return 'Noon';
           }
-          //daydescANDfiveday
-          if (ajaxedLoc["v3-wx-forecast-daily-5day"] == null) {
-            weatherInfo.dayDesc.lowerbar.displayname = maincitycoords.displayname
-            weatherInfo.dayDesc.lowerbar.noReport = true
-            weatherInfo.fiveDay.lowerbar.displayname = maincitycoords.displayname
-            weatherInfo.fiveDay.lowerbar.noReport = true
-          } else {
-            var daycorrection = 0;
-            if (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) {
-              daycorrection = 1;
-            }
-            //daydesc
-            for (var hi = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) ? 1 : 0; hi < 4 + daycorrection; hi++) {
-              weatherInfo.dayDesc.lowerbar.day[hi - daycorrection].name = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[hi].replace('Tomorrow', ajaxedLoc["v3-wx-forecast-daily-5day"].dayOfWeek[1]))
-              weatherInfo.dayDesc.lowerbar.day[hi - daycorrection].desc = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].narrative[hi] + ((ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].qualifierPhrase[hi] != null && ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].narrative[hi].includes(ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].qualifierPhrase[hi]) === false) ? ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].qualifierPhrase[hi] : '') + ((ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windPhrase[hi - daycorrection] != null && ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].narrative[hi].includes(ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windPhrase[hi]) === false) ? ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windPhrase[hi] : '')
-            }
-            weatherInfo.dayDesc.lowerbar.displayname =  maincitycoords.displayname
-            //fiveday
-            var weatherLocsFD = {displayname:"",day:[{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""}]};
-            for (var hi = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) ? 1 : 0, hidp = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) ? 2 : 0; hi < 5 + daycorrection; hi++, hidp = hidp + 2) {
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].name = ajaxedLoc["v3-wx-forecast-daily-5day"].dayOfWeek[hi].substring(0,3)
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].windspeed = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windSpeed[hidp]
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].icon = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].iconCode[hidp]
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].cond = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].wxPhraseLong[hidp].replace('Scattered ', "Sct'd ").replace('Thunderstorms',"T'Storms").replace('Thundershowers',"T'Showers").replace('/',', ');
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].high = ajaxedLoc["v3-wx-forecast-daily-5day"].temperatureMax[hi]
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].low = ajaxedLoc["v3-wx-forecast-daily-5day"].temperatureMin[hi]
-              weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].weekend = ((dateFns.isWeekend(ajaxedLoc["v3-wx-forecast-daily-5day"].validTimeLocal[hi])) ? ' weekend' : '')
-            }
-            weatherInfo.fiveDay.lowerbar.displayname =  maincitycoords.displayname
-          }
-          //bulletin
-          if (ajaxedLoc["v3alertsHeadlines"] != undefined){
-            var displayday;
-            var bulletintext = "";
-            var ret = [], sret = [];
-      			var ai=0;
-      			//info
-      			//get only weather alers
-            for (ai=0; ai<=ajaxedLoc["v3alertsHeadlines"].alerts.length - 1; ai++) {
-      				warning = ajaxedLoc["v3alertsHeadlines"].alerts[ai].categories[0].category;
-      				if (warning == "Met")  {
-      					ret.push({idx:ai, priority: getWarningPosition(ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription)})
-      					if (ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription == "Severe Thunderstorm Warning" || ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription == "Flash Flood Warning" || ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription == "Tornado Warning") {
-      						sret.push({idx:ai, priority:ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription})
-      					}
-      				}
-      			};
-      			if (ret.length != 0) {
-      				ret.sort(function(a,b) {return a.priority - b.priority;});
-                function pushAlert(aai) {
-                  $.getJSON('https://api.weather.com/v3/alerts/detail?alertId='+ ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].detailKey +'&format=json&language=en-US&apiKey=' + api_key, function(adata) {
-                    var alertt = {name:"", desc:"", status:"", significance:""}
-                    alertt.name = ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].eventDescription
-                    alertt.significance = ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].significance
-                    alertt.status = ((ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].messageType == " Update") ? 'UPDATE' : (ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].messageType == "Cancel") ? "CANCELLATION" : "")
-                    alertt.desc = adata.alertDetail.texts[0].description
-                    weatherInfo.bulletin.marqueewarnings.push(alertt)
-                    if (aai < (ret.length - 1)) {pushAlert(aai + 1)};
-                  });
-                };
-                pushAlert(0)
-              }
+          return (dateFns.format(time,'h a'))//.replace(" ", "");
+        }
+        //get reporting hours: 12am, 6am, 12pm, 3pm, 5pm, 8pm...
+        function calcHourlyReport(data) {
+          var ret = [],
+            targets = [0, 6, 12, 15, 17, 20],   // hours that we report
+            current = dateFns.getHours(new Date()),
+            now = new Date(),
+            //firsthour = targets[ getNextHighestIndex(targets, current) ],
+            start,
+            hour, hi=0;
 
-              if (sret.length != 0) {
-                weatherInfo.bulletin.severeweathermode = true;
-        				sret.sort(function(a,b) {return a.priority - b.priority;});
-                function pushSevereAlert(aai) {
-                  $.getJSON('https://api.weather.com/v3/alerts/detail?alertId='+ ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].detailKey +'&format=json&language=en-US&apiKey=' + api_key, function(sdata) {
-                    var severewarn = {warningname:"", warningdesc:"", warningstatus:""}
-                    severewarn.warningname = ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].eventDescription
-                    severewarn.warningstatus = ((ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].messageType == "Update") ? 'UPDATE' : (ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].messageType == "Cancel") ? "CANCELLATION" : "")
-                    severewarn.warningdesc = sdata.alertDetail.texts[0].description
-                    weatherInfo.bulletin.severewarnings.push(severewarn)
-                    if (aai < (sret.length - 1)) {pushSevereAlert(aai + 1)};
-                  });
-                };
-                pushSevereAlert(0)
-              } else {
-                weatherInfo.bulletin.severeweathermode = false;
+          switch (true) {
+            case (current < 3):
+              start = 6; //before 3:00
+            case (current < 9):
+              start = 12; break; //before 9:00 after 3:00
+            case (current < 12):
+              start = 15; break; //before 12:00 after 9:00
+            case (current < 14):
+              start = 17; break; //before 2:00 after 12:00
+            case (current < 17):
+              start = 20; break; //before 5:00 after 2:00
+            case (current < 20):
+                start = 0; break; //before 8:00 after 5:00
+            default:
+              start = 6;
+          }
+          while(ret.length<4){
+            // hour must be equal or greater than current
+            hour = dateFns.getHours(data.validTimeLocal[hi] );
+            if ( dateFns.isAfter(data.validTimeLocal[hi], now) && (hour==start || ret.length>0) )  {
+              if ( targets.indexOf(hour)>=0 ) { // it is in our target list so record its index
+                ret.push(hi);
               }
-    };
-  }
+            }
+            hi++;
+          }
+          return ret;
+        }
+        function buildHourlyHeaderTitle(time) {
+          var today = new Date(),
+            tomorrow = dateFns.addDays(today, 1);
+            sforecast = "'s Forecast";
+
+          // title based on the first hour reported
+          switch (dateFns.getHours(time)) {
+
+            case 6: // 6 - Nextday's Forecast / Today's Forecast
+              // if 6am today
+              if (dateFns.isToday(time)) {
+                return dateFns.format(today, 'dddd') + sforecast;
+              }
+            case 0: // 0 - Nextday's Forecast
+              return dateFns.format(tomorrow, 'dddd') + sforecast;
+
+            case 12:
+              return 'This Afternoon';
+
+            case 15:
+              return "Today's Forecast";
+
+            case 17:
+              return "Tonight's Forecast";
+
+            case 20:
+              return dateFns.format(today, 'ddd') + ' Night/' + dateFns.format(tomorrow, 'ddd');
+
+          }
+        }
+
+        weatherInfo.dayPart.lowerbar.daytitle = buildHourlyHeaderTitle(ajaxedLoc["v3-wx-forecast-hourly-2day"].validTimeLocal[indexes[0]])
+        for (var hi = 0; hi < 4; hi++) {
+          weatherInfo.dayPart.lowerbar.hour[hi].time = buildHourlyTimeTitle(ajaxedLoc["v3-wx-forecast-hourly-2day"].validTimeLocal[indexes[hi]])
+          weatherInfo.dayPart.lowerbar.hour[hi].cond = ajaxedLoc["v3-wx-forecast-hourly-2day"].wxPhraseLong[indexes[hi]].replace('Scattered ', "Sct'd ").replace('Thunderstorms',"T'Storms").replace('Thundershowers',"T'Showers").replace('/',', ')
+          weatherInfo.dayPart.lowerbar.hour[hi].icon = ajaxedLoc["v3-wx-forecast-hourly-2day"].iconCode[indexes[hi]]
+          weatherInfo.dayPart.lowerbar.hour[hi].temp = ajaxedLoc["v3-wx-forecast-hourly-2day"].temperature[indexes[hi]]
+          weatherInfo.dayPart.lowerbar.hour[hi].wind = ajaxedLoc["v3-wx-forecast-hourly-2day"].windDirectionCardinal[indexes[hi]] + ' ' + ajaxedLoc["v3-wx-forecast-hourly-2day"].windSpeed[indexes[hi]]
+          weatherInfo.dayPart.lowerbar.hour[hi].windspeed= ajaxedLoc["v3-wx-forecast-hourly-2day"].windSpeed[indexes[hi]]
+        }
+        weatherInfo.dayPart.lowerbar.displayname = maincitycoords.displayname
+      }
+      //daydescANDfiveday
+      if (ajaxedLoc["v3-wx-forecast-daily-5day"] == null) {
+        weatherInfo.dayDesc.lowerbar.displayname = maincitycoords.displayname
+        weatherInfo.dayDesc.lowerbar.noReport = true
+        weatherInfo.fiveDay.lowerbar.displayname = maincitycoords.displayname
+        weatherInfo.fiveDay.lowerbar.noReport = true
+      } else {
+        var daycorrection = 0;
+        if (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) {
+          daycorrection = 1;
+        }
+        //daydesc
+        for (var hi = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) ? 1 : 0; hi < 4 + daycorrection; hi++) {
+          weatherInfo.dayDesc.lowerbar.day[hi - daycorrection].name = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[hi].replace('Tomorrow', ajaxedLoc["v3-wx-forecast-daily-5day"].dayOfWeek[1]))
+          weatherInfo.dayDesc.lowerbar.day[hi - daycorrection].desc = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].narrative[hi] + ((ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].qualifierPhrase[hi] != null && ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].narrative[hi].includes(ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].qualifierPhrase[hi]) === false) ? ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].qualifierPhrase[hi] : '') + ((ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windPhrase[hi - daycorrection] != null && ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].narrative[hi].includes(ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windPhrase[hi]) === false) ? ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windPhrase[hi] : '')
+        }
+        weatherInfo.dayDesc.lowerbar.displayname =  maincitycoords.displayname
+        //fiveday
+        var weatherLocsFD = {displayname:"",day:[{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""},{name:"",cond:"",icon:"",high:"",low:""}]};
+        for (var hi = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) ? 1 : 0, hidp = (ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].daypartName[0] == null) ? 2 : 0; hi < 5 + daycorrection; hi++, hidp = hidp + 2) {
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].name = ajaxedLoc["v3-wx-forecast-daily-5day"].dayOfWeek[hi].substring(0,3)
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].windspeed = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].windSpeed[hidp]
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].icon = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].iconCode[hidp]
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].cond = ajaxedLoc["v3-wx-forecast-daily-5day"].daypart[0].wxPhraseLong[hidp].replace('Scattered ', "Sct'd ").replace('Thunderstorms',"T'Storms").replace('Thundershowers',"T'Showers").replace('/',', ');
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].high = ajaxedLoc["v3-wx-forecast-daily-5day"].temperatureMax[hi]
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].low = ajaxedLoc["v3-wx-forecast-daily-5day"].temperatureMin[hi]
+          weatherInfo.fiveDay.lowerbar.day[hi - daycorrection].weekend = ((dateFns.isWeekend(ajaxedLoc["v3-wx-forecast-daily-5day"].validTimeLocal[hi])) ? ' weekend' : '')
+        }
+        weatherInfo.fiveDay.lowerbar.displayname =  maincitycoords.displayname
+      }
+      //bulletin
+      if (ajaxedLoc["v3alertsHeadlines"] != undefined){
+        var displayday;
+        var bulletintext = "";
+        var ret = [], sret = [];
+        var ai=0;
+        //info
+        //get only weather alers
+        for (ai=0; ai<=ajaxedLoc["v3alertsHeadlines"].alerts.length - 1; ai++) {
+          warning = ajaxedLoc["v3alertsHeadlines"].alerts[ai].categories[0].category;
+          if (warning == "Met")  {
+            ret.push({idx:ai, priority: getWarningPosition(ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription)})
+            if (ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription == "Severe Thunderstorm Warning" || ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription == "Flash Flood Warning" || ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription == "Tornado Warning") {
+              sret.push({idx:ai, priority:ajaxedLoc["v3alertsHeadlines"].alerts[ai].eventDescription})
+            }
+          }
+        };
+        if (ret.length != 0) {
+          ret.sort(function(a,b) {return a.priority - b.priority;});
+            function pushAlert(aai) {
+              $.getJSON('https://api.weather.com/v3/alerts/detail?alertId='+ ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].detailKey +'&format=json&language=en-US&apiKey=' + api_key, function(adata) {
+                var alertt = {name:"", desc:"", status:"", significance:""}
+                alertt.name = ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].eventDescription
+                alertt.significance = ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].significance
+                alertt.status = ((ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].messageType == " Update") ? 'UPDATE' : (ajaxedLoc["v3alertsHeadlines"].alerts[ret[aai].idx].messageType == "Cancel") ? "CANCELLATION" : "")
+                alertt.desc = adata.alertDetail.texts[0].description
+                weatherInfo.bulletin.marqueewarnings.push(alertt)
+                if (aai < (ret.length - 1)) {pushAlert(aai + 1)};
+              });
+            };
+            pushAlert(0)
+          }
+
+          if (sret.length != 0) {
+            weatherInfo.bulletin.severeweathermode = true;
+            sret.sort(function(a,b) {return a.priority - b.priority;});
+            function pushSevereAlert(aai) {
+              $.getJSON('https://api.weather.com/v3/alerts/detail?alertId='+ ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].detailKey +'&format=json&language=en-US&apiKey=' + api_key, function(sdata) {
+                var severewarn = {warningname:"", warningdesc:"", warningstatus:""}
+                severewarn.warningname = ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].eventDescription
+                severewarn.warningstatus = ((ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].messageType == "Update") ? 'UPDATE' : (ajaxedLoc["v3alertsHeadlines"].alerts[sret[aai].idx].messageType == "Cancel") ? "CANCELLATION" : "")
+                severewarn.warningdesc = sdata.alertDetail.texts[0].description
+                weatherInfo.bulletin.severewarnings.push(severewarn)
+                if (aai < (sret.length - 1)) {pushSevereAlert(aai + 1)};
+              });
+            };
+            pushSevereAlert(0)
+          } else {
+            weatherInfo.bulletin.severeweathermode = false;
+          }
+};
+}
+   
   }).fail(function() {
     weatherInfo.currentCond.sidebar.displayname = maincitycoords.displayname
     weatherInfo.currentCond.sidebar.noReport = true
@@ -971,33 +973,43 @@ function pbTMRW() {
   weatherInfo.bulletin.marqueewarnings = [];
   weatherInfo.bulletin.severewarnings = [];
   var url = "https://api.weather.com/v3/wx/forecast/daily/3day?geocode="
-  url += `${maincitycoords.lat},${maincitycoords.lon};`
+  url += `${maincitycoords.lat},${maincitycoords.lon}`;
   url += "&language=en-US&units=e&format=json&apiKey=" + api_key
 
   $.getJSON(url, function(data) {
         var ajaxedLoc = data[0]
         if (ajaxedLoc == null) {
           weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
-          weatherInfo.tmrwCond.sidebar.noReport = true
+          weatherInfo.tmrwCond.sidebar.noReport = false
           
         } else {
           if (ajaxedLoc["v3-wx-forecast-daily-3day"] == null) {
             weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
-            weatherInfo.tmrwCond.sidebar.noReport = true
-          } else {
-            weatherInfo.tmrwCond.sidebar.temp = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1]
-            weatherInfo.tmrwCond.sidebar.cond = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].wxPhraseLong[1]
-            weatherInfo.tmrwCond.sidebar.icon = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].iconCode[1]
-            weatherInfo.tmrwCond.sidebar.humid = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].relativeHumidity[1]
+            weatherInfo.tmrwCond.sidebar.noReport = false
+            weatherInfo.tmrwCond.sidebar.temp = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[2]
+            weatherInfo.tmrwCond.sidebar.cond = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].wxPhraseLong[2]
+            weatherInfo.tmrwCond.sidebar.icon = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].iconCode[2]
+            weatherInfo.tmrwCond.sidebar.humid = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].relativeHumidity[2]
             weatherInfo.tmrwCond.sidebar.wind = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windDirectionCardinal == "CALM" || ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed == 0) ? 'calm' :  ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windDirectionCardinal) + ' ' + ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed === 0) ? '' : ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed)
-            weatherInfo.tmrwCond.sidebar.uvidx = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].uvDescription[1]
-            weatherInfo.tmrwCond.sidebar.feelslike.type = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureHeatIndex[1]) ? "heat index" : ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureWindChill[1] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1]) ? "wind chill" : "dontdisplay"))
-            weatherInfo.tmrwCond.sidebar.feelslike.val = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureFeelsLike[1]
+            weatherInfo.tmrwCond.sidebar.uvidx = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].uvDescription[2]
+            weatherInfo.tmrwCond.sidebar.feelslike.type = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[2] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureHeatIndex[1]) ? "heat index" : ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureWindChill[1] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1]) ? "wind chill" : "dontdisplay"))
+            weatherInfo.tmrwCond.sidebar.feelslike.val = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureFeelsLike[2]
+            console.log(ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1] + "Temp test")
+          } else {
+            weatherInfo.tmrwCond.sidebar.temp = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[2]
+            weatherInfo.tmrwCond.sidebar.cond = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].wxPhraseLong[2]
+            weatherInfo.tmrwCond.sidebar.icon = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].iconCode[2]
+            weatherInfo.tmrwCond.sidebar.humid = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].relativeHumidity[2]
+            weatherInfo.tmrwCond.sidebar.wind = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windDirectionCardinal[2] == "CALM" || ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed[2] == 0) ? 'calm' :  ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windDirectionCardinal[2]) + ' ' + ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed[2] === 0) ? '' : ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].windSpeed[2])
+            weatherInfo.tmrwCond.sidebar.uvidx = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].uvDescription[2]
+            weatherInfo.tmrwCond.sidebar.feelslike.type = ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[2] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureHeatIndex[2]) ? "heat index" : ((ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureWindChill[2] != ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[2]) ? "wind chill" : "dontdisplay"))
+            weatherInfo.tmrwCond.sidebar.feelslike.val = ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperatureFeelsLike[2]
             weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
+            console.log(ajaxedLoc["v3-wx-forecast-daily-3day"].daypart[0].temperature[1] + "Temp test")
           }
           
-          
-  }
+        }
+  
   }).fail(function() {
     weatherInfo.tmrwCond.sidebar.displayname = maincitycoords.displayname
     weatherInfo.tmrwCond.sidebar.noReport = true
