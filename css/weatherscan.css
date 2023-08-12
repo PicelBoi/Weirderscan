@@ -2497,7 +2497,7 @@ html, body {
 }
 .info-slide-content.health-forecast .frost-pane.forecastdetails .title {
   width:100%;
-  font-size:33.25px;
+  font-size:27.3px;
   padding-left:12.5px;
   padding-bottom:0;
   height:40.5px;
@@ -2875,7 +2875,7 @@ html, body {
   color:#fff;
   text-shadow:0 0 0;
   position:absolute;
-  top:-67.5px;
+  top:-75.5px;
   left:-77px;
   width:150px;
   transform:scale(107%,100%);
@@ -3395,8 +3395,8 @@ html, body {
   transform-origin:right;
   text-align:right;
   position:absolute;
-  top:30px;
-  right:-34px;
+  top:106px;
+  right:33px;
   width: 97%;
 }
 .info-slide-content.teetime {
