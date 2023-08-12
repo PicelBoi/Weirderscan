@@ -1663,7 +1663,7 @@ html, body {
   color:#fff;
   position:absolute;
   font-size:51px;
-  left:395px;
+  left:372px;
   top:50%;
   width:10%;
   text-align:center;
@@ -1721,7 +1721,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -1936,7 +1936,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2414,7 +2414,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2570,7 +2570,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2711,7 +2711,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:102.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2757,7 +2757,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -2925,7 +2925,7 @@ html, body {
   text-shadow:2px 2px 4px #000;
   filter:drop-shadow(2px 2px 2.4px #000);
   height:60px;
-  background:#000000;
+  background:#241e95;
   width:110px;
   margin-top:16.75px;
   margin-left:80px;
@@ -3150,7 +3150,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#000000;
+  background:#241e95;
   height:42.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -3895,7 +3895,7 @@ html, body {
   z-index:388687
 }
 .info-slide-content.skireport .thing .thingbg {
-  background:#000000;
+  background:#241e95;
   height:40px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -4155,7 +4155,7 @@ html, body {
   z-index:388687
 }
 .info-slide-content.internationalforecast .thing .thingbg {
-  background:#000000;
+  background:#241e95;
   height:52.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -4732,7 +4732,7 @@ label {
   position:absolute;
   width:125px;
   top:0;
-  background:linear-gradient(to right,rgba(147,156,171,0),rgba(147,156,171,.97));
+  background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.97));
   height:100%;
   right:125px
 }
