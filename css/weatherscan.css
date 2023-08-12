@@ -901,24 +901,26 @@ html, body {
 .city-info .frost-pane.left * {
   position:absolute;
   padding-top:5px;
-  line-height:182.5%
+  line-height:182.5%;
 }
 .frost-pane .labels {
   font-family:Shin Go Ultra;
   color:#d8c422;
-  left:2%;
+  left:11%;
   transform:scale(115.5%,100%);
   transform-origin:left;
   font-size:37.5px;
 }
 .city-info .frost-pane .data {
-  font-family:Overpass;
+  font-family:IBM Plex Sans;
   font-weight: bold
   transform:scale(113.5%,100%);
   transform-origin:right;
-  right:10%;
+  right:8%;
   font-size:39px;
-  text-align:right
+  text-align:right;
+  bottom: 4%;
+  line-height: 70px
 }
 .data {
   font-family: IBM Plex Sans
@@ -999,7 +1001,7 @@ html, body {
 }
 .info-slide-content.daypart .hour.i .thingbg {
   position:absolute;
-  right:-274%;
+  right:-273%;
   height:35px;
   width:383%;
   background:#000000;
@@ -1016,7 +1018,7 @@ html, body {
   position:absolute;
   height:35px;
   width:100%;
-  background:#2a3a8a;
+  background:#000;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-334.5px -329px;
   mask-size:1065px 1164px
@@ -1030,7 +1032,7 @@ html, body {
   position:absolute;
   height:35px;
   width:100%;
-  background:#2a3a8a;
+  background:#000;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-532.5px -329px;
   mask-size:1065px 1164px
@@ -1044,7 +1046,7 @@ html, body {
   position:absolute;
   height:35px;
   width:100%;
-  background:#2a3a8a;
+  background:#000;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-730.5px -329px;
   mask-size:1065px 1164px
@@ -1846,11 +1848,11 @@ html, body {
 .info-slide-content.airportpanel .leftpanel .frost-pane.bottom .reasonfill {
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:33px;
+  font-size:26px;
   text-shadow:#000 2px 2px 4px;
   position:absolute;
-  top:142.5px;
-  left:252.5px;
+  top:141.5px;
+  left:228.5px;
   transform:scale(103%,100%);
   transform-origin:left
 }
@@ -1980,7 +1982,7 @@ html, body {
   transform-origin:left;
   color:#fff;
   position:fixed;
-  font-size:34.5px;
+  font-size:27.5px;
   left:10px
 }
 .info-slide-content.otherairports .airport.i .airportname {
@@ -1997,8 +1999,8 @@ html, body {
   width:80px;
   text-align:center;
   position:relative;
-  font-size:40.5px;
-  left:437px
+  font-size:29.5px;
+  left:427px;
 }
 .info-slide-content.otherairports .airport .icon {
   background-repeat:no-repeat;
@@ -4097,7 +4099,7 @@ html, body {
 }
 .info-slide-content.destinationforecast .hightemp {
   font-family:Shin Go Ultra;
-  font-size:41px;
+  font-size:29px;
   position:absolute;
   top:20px;
   right:0;
@@ -4113,10 +4115,10 @@ html, body {
 }
 .info-slide-content.destinationforecast .lowtemp {
   font-family:Shin Go Ultra;
-  font-size:41px;
+  font-size:21px;
   position:absolute;
   top:68px;
-  right:0;
+  right:-3%;
   width:60px;
   transform:scale(104%,100%);
   transform-origin:left
@@ -4162,7 +4164,7 @@ html, body {
   z-index:388687
 }
 .info-slide-content.internationalforecast .thing .thingbg {
-  background:#241e95;
+  background:#000;
   height:52.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -4247,10 +4249,10 @@ html, body {
 }
 .info-slide-content.internationalforecast .hightemp {
   font-family:Shin Go Ultra;
-  font-size:41px;
+  font-size:29px;
   position:absolute;
   top:20px;
-  right:0;
+  right:1%;
   width:60px;
   transform:scale(104%,100%);
   transform-origin:left
@@ -4263,7 +4265,7 @@ html, body {
 }
 .info-slide-content.internationalforecast .lowtemp {
   font-family:Shin Go Ultra;
-  font-size:41px;
+  font-size:23px;
   position:absolute;
   top:68px;
   right:0;
@@ -4341,7 +4343,7 @@ html,
 p {
   margin:0;
   padding:0;
-  font-family:Overpass,zemestrostd,Sans-Serif;
+  font-family:IBM Plex sans,zemestrostd,Sans-Serif;
   font-weight:400;
   font-style:normal;
   
@@ -5077,12 +5079,12 @@ label {
 .info-slide .segment {
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:44px;
+  font-size:48px;
   text-shadow:#000 2px 2px 2px;
   position:absolute;
   text-align:left;
-  right:122.5px;
-  bottom:70px;
+  right:29.5px;
+  bottom:244px;
   transform:scale(129%,100%);
   transform-origin:right
 }
@@ -5781,7 +5783,7 @@ label {
 #current-temp {
   font-size:69px;
   position:absolute;
-  top:88px;
+  top:97px;
   left:-155px;
   text-align:center;
   width:100%;
@@ -6374,7 +6376,7 @@ label {
   padding-top:0;
   transform:translateY(-43.5%) scale(105.9%,100%);
   transform-origin:right;
-  right:90px;
+  right:22px;
   font-stretch:semi-expanded;
   z-index: 3
 }
