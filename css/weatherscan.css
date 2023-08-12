@@ -1314,7 +1314,7 @@ html, body {
 .info-slide-content.extended-forecast .frost-pane .conditions {
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:27px;
+  font-size:22px;
   text-shadow:#000 2px 2px 2px;
   height:113px;
   line-height:132.5%;
@@ -1389,7 +1389,7 @@ html, body {
   position:absolute;
   font-family:Shin Go Ultra;
   color:#fff;
-  font-size:54px;
+  font-size:45px;
   left:266px;
   top:74px;
   transform:scale(102.5%,100%)
@@ -1408,7 +1408,7 @@ html, body {
   position:absolute;
   font-family:Shin Go Ultra;
   color:#fff;
-  font-size:54px;
+  font-size:45px;
   left:266px;
   top:137.5px;
   transform:scale(102.5%,100%)
@@ -1437,7 +1437,7 @@ html, body {
   position:absolute;
   font-family:Shin Go Ultra;
   color:#fff;
-  font-size:54px;
+  font-size:45px;
   left:567.5px;
   top:74px;
   transform:scale(102.5%,100%);
@@ -1465,9 +1465,9 @@ html, body {
   position:absolute;
   font-family:Shin Go Ultra;
   color:#fff;
-  font-size:54px;
+  font-size:45px;
   left:567.5px;
-  top:147.5px;
+  top:138.5px;
   transform:scale(102.5%,100%);
   transform-origin:left
 }
@@ -1493,7 +1493,7 @@ html, body {
   padding-left:2.5px;
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:33px;
+  font-size:23px;
   text-shadow:#000 2px 2px 4px;
   transform:scale(104%,100%);
   transform-origin:left
@@ -1502,7 +1502,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#2a3a8a;
+  background:#000000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -1519,7 +1519,7 @@ html, body {
   font-family:Shin Go Ultra;
   color:#d8c422;
   position:absolute;
-  font-size:36px;
+  font-size:30px;
   left:20px;
   top:55.5px;
   transform:scale(106.5%,100%);
@@ -1531,7 +1531,7 @@ html, body {
   position:absolute;
   font-size:38px;
   left:167px;
-  top:54px;
+  top:48px;
   transform:scale(105.5%,100%);
   transform-origin:left
 }
@@ -1539,7 +1539,7 @@ html, body {
   font-family:Shin Go Ultra;
   color:#d8c422;
   position:absolute;
-  font-size:36px;
+  font-size:30px;
   left:20px;
   top:125.5px;
   transform:scale(106.5%,100%);
@@ -1551,7 +1551,7 @@ html, body {
   position:absolute;
   font-size:38px;
   left:167px;
-  top:124px;
+  top:117px;
   transform:scale(105.5%,100%);
   transform-origin:left
 }
@@ -1613,7 +1613,7 @@ html, body {
 .info-slide-content.almanac .frost-pane.purple .phase .date {
   font-family:Shin Go Ultra;
   color:#fff;
-  font-size:26px;
+  font-size:20px;
   padding-top:0;
   align-self:center;
   position:absolute;
@@ -4358,7 +4358,7 @@ p {
 }
 html * {
   box-sizing:border-box;
-  font-size:100%
+  font-size:100%;
 }
 body,
 html {
@@ -5076,7 +5076,7 @@ label {
 .info-slide .segment {
   color:#fff;
   font-family:Shin Go Ultra;
-  font-size:53px;
+  font-size:44px;
   text-shadow:#000 2px 2px 2px;
   position:absolute;
   text-align:left;
@@ -5402,7 +5402,8 @@ label {
 .city-slide-intro .weatherscancopyright span {
   display:block;
   transform:scale(107%,100%);
-  transform-origin:left
+  transform-origin:left;
+  font-size: 85%
 }
 @keyframes cityaccentmovei {
   35% {
