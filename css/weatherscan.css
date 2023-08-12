@@ -916,9 +916,8 @@ html, body {
   transform:scale(113.5%,100%);
   transform-origin:right;
   right:10%;
-  font-size:10.5px;
-  text-align:right;
-  
+  font-size:37.5px;
+  text-align:right
 }
 .city-info .frost-pane.right {
   background-position:-570px -329px;
@@ -969,7 +968,7 @@ html, body {
   text-transform:capitalize
 }
 .frost-pane .content {
-  font-size:42px;
+  font-size:50px;
   line-height:125%
 }
 .info-slide-content.daypart {
@@ -999,7 +998,7 @@ html, body {
   right:0;
   height:35px;
   width:100%;
-  background:#000000;
+  background:#2a3a8a;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-94.5px -329px;
   mask-size:1065px 1164px
@@ -1201,7 +1200,7 @@ html, body {
   position:absolute;
   height:35px;
   width:100%;
-  background:#000000;
+  background:#2a3a8a;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-72px -329px;
   mask-size:1065px 1164px
@@ -1492,8 +1491,7 @@ html, body {
   font-size:33px;
   text-shadow:#000 2px 2px 4px;
   transform:scale(104%,100%);
-  transform-origin:left;
-  z-index: 69420
+  transform-origin:left
 }
 .info-slide-content.almanac .thing .thingbg {
   position:absolute;
@@ -2410,8 +2408,7 @@ html, body {
   text-shadow:2px 2px 4px #000;
   transform:scale(105%,100%);
   padding-left:62.5px;
-  transform-origin:left;
-   z-index: 69420
+  transform-origin:left
 }
 .info-slide-content.health-forecast .thing .thingbg {
   position:absolute;
@@ -2778,8 +2775,7 @@ html, body {
   height:35px;
   padding-left:67.5px;
   text-shadow:#000 2px 2px 4px;
-  transform-origin:left;
-  z-index: 69420
+  transform-origin:left
 }
 .info-slide-content.Aches-Breath .frost-pane {
   transform:translate(0,10px)
@@ -3154,7 +3150,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  
+  background:#000000;
   height:42.5px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -3341,7 +3337,7 @@ html, body {
   height:115px;
   position:absolute;
   left:256px;
-  top:14px;
+  top:22px;
   font-weight:700;
   font-size:51.5px;
   transform:scale(99%,112%);
@@ -3391,8 +3387,8 @@ html, body {
   text-align:right;
   position:absolute;
   top:30px;
-  right:61px;
-  width: 94%;
+  right:-29px;
+  width: 17%
 }
 .info-slide-content.teetime {
   flex-direction:row
@@ -4338,7 +4334,7 @@ html,
 p {
   margin:0;
   padding:0;
-  font-family:overpass,zemestrostd,Sans-Serif;
+  font-family:Overpass,zemestrostd,Sans-Serif;
   font-weight:400;
   font-style:normal;
   
@@ -4778,7 +4774,7 @@ label {
   z-index:4;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%;
-  background-image: url(/images/newbg/map_banner_bg.png);
+  background-image: /images/newbg/map_banner_bg.png;
 }
 .mapcon {
   flex:1
@@ -4844,7 +4840,7 @@ label {
   z-index:4;
   text-shadow:2px 2px 3px #000;
   line-height:24.5px;
-  background-image: linear-gradient(rgba(0,0,0,1),rgba(50,50,50,0.8),rgba(200,200,200,0.7));
+  background: rgba(0,0,0,0.7)
 }
 .bulletin .info-subheader {
   font-family:Shin Go Regular;
@@ -4872,6 +4868,7 @@ label {
   font-size:32px;
   opacity: 60;
   z-index: 3;
+  
 }
 .info-slide-content br {
   position:relative!important
@@ -5783,7 +5780,7 @@ label {
   font-size:69px;
   position:absolute;
   top:88px;
-  left:-151px;
+  left:-155px;
   text-align:center;
   width:100%;
   transform:scale(102.5%,100%);
@@ -5831,8 +5828,8 @@ label {
   font-family:pressurearrow,Overpass;
   font-size:31px;
   position:absolute;
-  left:41px;
-  top:183px;
+  left:40px;
+  top:177px;
   text-align:left;
   width:62.5%;
   font-weight:400;
@@ -6131,7 +6128,7 @@ label {
   transform-origin:right
 }
 .forecast-tile.daily .low {
-  color:rgba(150,150,150,.5);
+  color:rgba(90,5,52,.5);
   top:64%;
   font-weight:800;
   font-size:35px;
@@ -6292,8 +6289,10 @@ label {
   transform-origin:left;
   filter:drop-shadow(.5px 0 0 #171717);
   background-color: rgba(0,0,0,0.5);
-  line-height: 30px
+  line-height: 30px;
+  font-family:IBM Plex Sans
 }
+
 .marqueeheadersevere {
   font-synthesis:weight;
   position:absolute;
