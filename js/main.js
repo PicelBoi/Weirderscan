@@ -5,13 +5,13 @@ $(function(){
 	    mainWidth = $main.outerWidth(),
 	    mainAspect = 4/3,
 	    resizeTimer;
-	var $body = $("body");
+
 	
 
 //calls rescale when window resizes
 	$(window).resize( function(e) {
 		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(scaleWindow, 100);
+		resizeTimer = scaleWindow();
 	});
 
 	function scaleWindow() {
@@ -29,6 +29,9 @@ $(function(){
 			transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
 		});
 		$("#startup").css({
+			transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+		});
+		$("#videobg").css({
 			transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
 		});
 	}
