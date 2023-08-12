@@ -71,10 +71,10 @@ function Loops() {
 			$('#current-temp').text( weatherInfo.currentCond.sidebar.temp ) ;
 			//$('#conditions-icon').css('background-image', 'url("' + getCCicon(+weatherInfo.currentCond.sidebar.icon, weatherInfo.currentCond.sidebar.windspeed) + '")');
 			getCCicon('#conditions-icon', weatherInfo.currentCond.sidebar.icon, weatherInfo.currentCond.sidebar.windspeed)
-			$('#tmrw-temp').text(weatherInfo.tmrwCond.sidebar.temp);
-			$('#tmrw-info').text(weatherInfo.tmrwCond.sidebar.cond);
-			$('#tonight-temp').text(weatherInfo.currentCond.sidebar.temp);
-			$('#tonight-info').text(weatherInfo.currentCond.sidebar.cond);
+			$('#tmrw-temp').text(weatherInfo.fiveDay.lowerbar.day[1].high / weatherInfo.fiveDay.lowerbar.day[1].low);
+			$('#tmrw-info').text(weatherInfo.fiveDay.lowerbar.day[1].cond);
+			$('#tonight-temp').text(ccloc.forecast.temp);
+			$('#tonight-info').text(ccloc.forecast.cond);
 		}
 	}
 

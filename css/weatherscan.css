@@ -4781,7 +4781,7 @@ label {
   z-index:4;
   background-position:69% 41.5%;
   background-size:120.3% 150.9%;
-  background-image: /images/newbg/map_banner_bg.png;
+  background-image: url(/images/newbg/map_banner_bg.png);
 }
 .mapcon {
   flex:1
