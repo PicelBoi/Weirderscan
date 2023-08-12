@@ -906,18 +906,22 @@ html, body {
 .frost-pane .labels {
   font-family:Shin Go Ultra;
   color:#d8c422;
-  left:13.5%;
+  left:2%;
   transform:scale(115.5%,100%);
   transform-origin:left;
-  font-size:37.5px
+  font-size:37.5px;
 }
 .city-info .frost-pane .data {
-  font-family:Shin Go Ultra;
+  font-family:Overpass;
+  font-weight: bold
   transform:scale(113.5%,100%);
   transform-origin:right;
   right:10%;
-  font-size:37.5px;
+  font-size:39px;
   text-align:right
+}
+.data {
+  font-family: IBM Plex Sans
 }
 .city-info .frost-pane.right {
   background-position:-570px -329px;
@@ -995,10 +999,10 @@ html, body {
 }
 .info-slide-content.daypart .hour.i .thingbg {
   position:absolute;
-  right:0;
+  right:-274%;
   height:35px;
-  width:100%;
-  background:#2a3a8a;
+  width:383%;
+  background:#000000;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-94.5px -329px;
   mask-size:1065px 1164px
@@ -1100,15 +1104,15 @@ html, body {
   opacity:0
 }
 .info-slide-content.daypart .tempbar .wind {
-  color:#24346f;
+  color:#696969;
   position:absolute;
   font-family:Shin Go Ultra;
-  font-size:32px;
+  font-size:24px;
   text-shadow:#000 0 0 0;
   height:30px;
   width:100%;
   text-align:center;
-  bottom:2.5px;
+  bottom:19.5px;
   opacity:0;
   transform:scale(105%,100%)
 }
@@ -1133,7 +1137,8 @@ html, body {
   max-height:400px;
   transform:translate(-2.5px,-2.5px) scale(115%,100%);
   transform-origin:left;
-  letter-spacing:1.5px
+  letter-spacing:1.5px;
+  word-wrap: break-word;
 }
 .info-slide-content.extended-forecast {
   width:100%
@@ -1200,7 +1205,7 @@ html, body {
   position:absolute;
   height:35px;
   width:100%;
-  background:#2a3a8a;
+  background:#000000;
   mask-image:url(/images/newbg/frostpane.svg);
   mask-position:-72px -329px;
   mask-size:1065px 1164px
@@ -1642,7 +1647,7 @@ html, body {
   background-position:-72px -661px
 }
 .info-slide-content.aroundcityinfo .frost-pane.city .cityname {
-  font-family:Shin Go Ultra;
+  font-family:IBM Plex Sans;
   color:#fff;
   position:absolute;
   font-size:33.5px;
@@ -1715,13 +1720,14 @@ html, body {
   transform-origin:left;
   text-shadow:#000 2px 2px 4px;
   transform:scale(105.5%,100%);
-  transform-origin:left
+  transform-origin:left;
+  line-height: 100%
 }
 .info-slide-content.airportpanel .thing .thingbg {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -1779,7 +1785,7 @@ html, body {
   font-size:27px;
   text-shadow:#000 2px 2px 4px;
   position:absolute;
-  top:159px;
+  top:149px;
   left:67.5px;
   transform:scale(104.5%,100%);
   transform-origin:left
@@ -1936,7 +1942,7 @@ html, body {
   position:absolute;
   right:0;
   top:0;
-  background:#241e95;
+  background:#000000;
   height:35px;
   width:100%;
   mask-image:url(/images/newbg/frostpane.svg);
@@ -3350,8 +3356,8 @@ html, body {
   width:100px;
   height:80px;
   position:absolute;
-  left:421px;
-  top:38.5px;
+  left:435px;
+  top:23.5px;
   font-size:62px;
   transform:scale(109%,100%);
   color:#df4541
@@ -3387,8 +3393,8 @@ html, body {
   text-align:right;
   position:absolute;
   top:30px;
-  right:-29px;
-  width: 17%
+  right:-34px;
+  width: 97%;
 }
 .info-slide-content.teetime {
   flex-direction:row
@@ -5734,7 +5740,8 @@ label {
   letter-spacing:2px;
   text-align:left;
   transform:scale(105%,100%);
-  transform-origin:left
+  transform-origin:left;
+  font-family: Shin GO ultra
 }
 #tonight-title {
   font-size:46px;
@@ -5744,7 +5751,8 @@ label {
   letter-spacing:2px;
   text-align:left;
   transform:scale(105%,100%);
-  transform-origin:left
+  transform-origin:left;
+  font-family: Shin Go Ultra
 }
 #tmrw-title {
   font-size:46px;
@@ -5754,7 +5762,8 @@ label {
   letter-spacing:2px;
   text-align:left;
   transform:scale(105%,100%);
-  transform-origin:left
+  transform-origin:left;
+  font-family: Shin Go Ultra
 }
 #nowwide {
   font-size:46px;
@@ -5764,7 +5773,8 @@ label {
   letter-spacing:2px;
   text-align:left;
   transform:scale(105%,100%);
-  transform-origin:left
+  transform-origin:left;
+  font-family: Shin Go ultra
 }
 #current-temp {
   font-size:69px;
@@ -5789,7 +5799,7 @@ label {
 #tmrw-temp {
   font-size:69px;
   position:absolute;
-  top:88px;
+  top:85px;
   left:-155px;
   text-align:center;
   width:100%;
@@ -6078,9 +6088,9 @@ label {
   font-family:Overpass;
   font-weight:600;
   font-size:27.5px;
-  color:#001668;
+  color:#FFFFFF;
   padding:10px 8px;
-  background:linear-gradient(to right,#484848 0,#808080 100%);
+  background:linear-gradient(to right,#171717 0,#242424 100%);
   background-color:#8caaea;
   height:26.5%;
   transform:scale(104%,100%);
