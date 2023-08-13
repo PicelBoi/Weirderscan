@@ -5155,8 +5155,8 @@ label {
   width: 1920px;
   height: 1080px;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
 }
 .health-slide-intro .accent.viii {
   background-color:#588fe8
