@@ -23,7 +23,6 @@
   <script type="text/javascript" src="//typesquare.com/3/tsst/script/en/typesquare.js?64d6d2bf2b98484aa42d209cac1e02e5" charset="utf-8"></script>
 </head>
 <video autoplay muted loop id="videobg">
-  <source id="cool">
 </video>
 <body class="bg" style="background-size: cover; background-position: center;">
 
@@ -293,12 +292,20 @@
       </div>
       <script>
       const bg = document.querySelector('body');
-      
-
+      var video = document.getElementById('videobg');
+      var source = document.createElement('source');
       var indexbg = Math.floor(Math.random() * (33- 1)+ 1);
-      
+      source.setAttribute('src', 'https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg');
+      source.setAttribute('type', 'video/mp4');
+      video.play();
+      video.load();
+      console.log({
+          src: source.getAttribute('src'),
+          type: source.getAttribute('type'),
+      });
+      video.appendChild(source);
       bg.style.cssText = ('background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg"); background-size: cover; background-position: center; '); 
-      document.getElementById('cool').setAttribute = ('src','url("https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg")');
+      
       </script>
       <form action="/action_page.php">
       <div class=textfield>
