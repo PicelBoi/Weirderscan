@@ -32,7 +32,9 @@ $(function(){
 			transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
 		});
 		$("#videobg").css({
-			transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+			transform: "translate(-50%, -50%) " + "scale(" + scale + ")",
+			top: "50%",
+			left: "50%"
 		});
 	}
 	scaleWindow(); // init
