@@ -294,8 +294,8 @@
       const bg = document.querySelector('body');
       var video = document.getElementById('videobg');
       var source = document.createElement('source');
-      var indexbg = 34;
-      //var indexbg = Math.floor(Math.random() * (34- 1)+ 1);
+
+      var indexbg = Math.floor(Math.random() * (34- 1)+ 1);
       source.setAttribute('src', 'https://raw.githubusercontent.com/PicelBoi/Weirderscan/assets/backgrounds/' + indexbg.toString() + '.bg');
       source.setAttribute('type', 'video/mp4');
       video.play();
