@@ -32,9 +32,9 @@ function WeatherAudio() {
 
 			// insert track names
 			for (var i = 0; i < audioSettings.order.length; i++) {
-				if (audioSettings.order[i]<120) {
+				if (audioSettings.order[i]<171) {
 					arr.push(musicpath + "(" + String(audioSettings.order[i]) + ').mp3');
-				} else if (audioSettings.order[i] > 120) {
+				} else if (audioSettings.order[i] > 171) {
 					console.log("Only 67 songs. Probably add more soon. -PicelBoi")
 				}
 			}
