@@ -136,7 +136,7 @@ function getCCicon(imgDiv,ccCode, windData){
 			icon = 35
 		}
 	}
-	$(imgDiv).css('background-image', `url("/images/icons/TPBCWeirderscanIcons.apng")`)
+	$(imgDiv).css('background-image', `url("/images/icons${apperanceSettings.iconSet}sprite.png")`)
 	$(imgDiv).css('background-position-x', `${(100/37)*icon}%`)
 }
 
