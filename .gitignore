@@ -1,11 +1,8 @@
 node_modules
 out
-weirderscan-win32-x64
-weirderscan-darwin-x64
-weirderscan-linux-x64
-weirderscan-darwin-x64.zip
-weirderscan-linux-x64.zip
-weirderscan-win32-x64.zip
+Weirderscan-win32-x64
+Weirderscan-darwin-x64.zip
+Weirderscan-linux-x64.zip
 main.js
 package.json
 package-lock.json
